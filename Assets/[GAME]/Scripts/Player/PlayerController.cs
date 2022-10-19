@@ -4,20 +4,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+
+public class PlayerController : SwipeMecLast
 {
+    [Header("Settings")]
+    [SerializeField] float forwardSpeed = 5f;
+
     [Header("User Control")]
     [HideInInspector] public bool userActive;
 
-    private void Start()
+    public override void Start()
     {
-        
+        base.Start();   // don't delete       
     }
 
     void Update()
     {
         if (!userActive) return;
-
+        transform.position += (forwardSpeed * Vector3.forward * Time.deltaTime);
+        Swipe();
     }
 
     //private void FixedUpdate()

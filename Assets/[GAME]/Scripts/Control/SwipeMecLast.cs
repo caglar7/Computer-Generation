@@ -189,7 +189,6 @@ namespace Mechanics
             obj.transform.eulerAngles -= new Vector3(0, -zRot, 0);
         }
 
-
         IEnumerator AutoTurnForward()
         {
             yield return null;

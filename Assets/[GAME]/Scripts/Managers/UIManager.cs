@@ -28,7 +28,10 @@ public class UIManager : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
     }
 
-    public void OpenClosePanels(int panelType) //  0 start // 1 fail // 2 nexxtLevel
+    // 0 => start button
+    // 1 => fail UI
+    // 2 => success next level UI
+    public void OpenClosePanels(int panelType) //  0 game in // 1 fail // 2 next level
     {
         switch (panelType)
         {
