@@ -22,10 +22,10 @@ public class UIManager : MonoBehaviour
     [Header("References")]
     [SerializeField] Camera cam;
 
-
     private void Start()
     {       
         playerController = FindObjectOfType<PlayerController>();
+        PanelController(true, false, false, false);
     }
 
     // 0 => start button
@@ -61,9 +61,9 @@ public class UIManager : MonoBehaviour
     void PanelController(bool startPanelVal, bool gameInPanelVal, bool retryPanelVal, bool nextPanelVal)
     {
         // canvas singleton implement
-        //startPanel.SetActive(startPanelVal);
-        //gameInPanel.SetActive(gameInPanelVal);
-        //retryPanel.SetActive(retryPanelVal);
-        //nextLevelPanel.SetActive(nextPanelVal);
+        CanvasSingleton.instance.panelStart.SetActive(startPanelVal);
+        CanvasSingleton.instance.panelGameIn.SetActive(gameInPanelVal);
+        CanvasSingleton.instance.panelRetry.SetActive(retryPanelVal);
+        CanvasSingleton.instance.panelNextLevel.SetActive(nextPanelVal);
     }
 }
