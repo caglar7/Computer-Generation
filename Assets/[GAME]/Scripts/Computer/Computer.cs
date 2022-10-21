@@ -18,5 +18,5 @@ using UnityEngine;
 
 public class Computer : MonoBehaviour
 {
-    public int computerIndex = 0;       // make private later
+        
 }

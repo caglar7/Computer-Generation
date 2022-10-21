@@ -20,6 +20,15 @@ public class ComputerStack : MonoBehaviour
     public float stackZOffset = 2f;     // diff between computers on front stack
     public float posUpdateSpeed = 5f;   // on x
 
+    #region Stack Methods
+
+    public void AddRemoveFromStack(Transform obj, StackAddRemove mode)
+    {
+        obj.SetParent((mode == StackAddRemove.Add) ? transform : null);
+    }
+
+    #endregion
+
     #region Get Methods
     // if in any case we rotate the front stack
     // this mec might cause problems
@@ -53,4 +62,10 @@ public enum LayerMaskName
 {
     StackComputer,
     CollectComputer,
+}
+
+public enum StackAddRemove
+{
+    Add,
+    Remove,
 }

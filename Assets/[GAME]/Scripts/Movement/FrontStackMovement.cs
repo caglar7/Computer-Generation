@@ -15,7 +15,7 @@ using UnityEngine;
 
 public class FrontStackMovement : MonoBehaviour
 {
-    public Transform followTarget;  // later make it private, visualizing for now
+    public Transform target;  // later make it private, visualizing for now
 
     [Header("Settings")]
     float zOffset, updateSpeed;
@@ -28,16 +28,13 @@ public class FrontStackMovement : MonoBehaviour
     {
         GetSettings();
         GetComponents();
-
-        // testing
-        StopFollowing();
     }
     #endregion
 
     #region Update
     private void Update()
     {
-        
+        FollowStack();
     } 
     #endregion
 
@@ -64,29 +61,40 @@ public class FrontStackMovement : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("StackComputer");
 
         // set follow target and init front stack pos
-        followTarget = ComputerStack.instance.GetFrontComputer();
-        Vector3 pos = followTarget.position;
+        target = ComputerStack.instance.GetFrontComputer();
+        Vector3 pos = target.position;
         pos.z += zOffset;
         transform.position = pos;
 
-        // 
+        // add to the stack
+        ComputerStack.instance.AddRemoveFromStack(transform, StackAddRemove.Add);
     } 
 
     private void FollowStack()
     {
-        if(followTarget)
+        if(target)
         {
-            
+            // x lerp
+            Vector3 pos = transform.position;
+            pos.z = (target.position.z + zOffset);
+            pos.x = Mathf.Lerp(pos.x, target.position.x, Time.deltaTime * updateSpeed);
+            transform.position = pos;
         }
     }
 
     private void StopFollowing()
     {
+        // testin
+        print("enable collider for dur");
+
         // disable collider for duration, avoiding unnecessery collisions
         Utils.instance.EnableColliderForDuration(collider, false, .5f);
 
         // set layer mask
         gameObject.layer = LayerMask.NameToLayer("CollectComputer");
+
+        // remove from stack
+        ComputerStack.instance.AddRemoveFromStack(transform, StackAddRemove.Remove);
 
         // throw it to the front with DoJump
         // ...

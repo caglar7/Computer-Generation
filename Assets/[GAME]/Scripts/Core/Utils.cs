@@ -26,6 +26,5 @@ public class Utils : MonoBehaviour
         col.enabled = !state;
     }
     #endregion
-
 }
 
