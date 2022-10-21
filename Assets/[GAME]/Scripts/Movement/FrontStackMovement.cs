@@ -60,11 +60,8 @@ public class FrontStackMovement : MonoBehaviour
         // set layer mask
         gameObject.layer = LayerMask.NameToLayer("StackComputer");
 
-        // set follow target and init front stack pos
+        // set follow target
         target = ComputerStack.instance.GetFrontComputer();
-        Vector3 pos = target.position;
-        pos.z += zOffset;
-        transform.position = pos;
 
         // add to the stack
         ComputerStack.instance.AddRemoveFromStack(transform, StackAddRemove.Add);
