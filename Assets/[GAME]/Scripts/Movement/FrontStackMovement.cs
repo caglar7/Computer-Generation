@@ -46,7 +46,9 @@ public class FrontStackMovement : MonoBehaviour
     // using LayerMask implementation can save us from dealing with many annoying toggles
     private void OnTriggerEnter(Collider other)
     {
-        if(gameObject.layer == LayerMask.NameToLayer(LayerMaskName.CollectComputer.ToString()))
+        // check to join stack
+        if(transform.tag == TagNames.CollectComputer.ToString()
+            && other.tag == TagNames.StackComputer.ToString())
         {
             StartFollowing();
         }
@@ -57,8 +59,8 @@ public class FrontStackMovement : MonoBehaviour
     #region Following Stack Methods
     private void StartFollowing()
     {
-        // set layer mask
-        gameObject.layer = LayerMask.NameToLayer("StackComputer");
+        // tag adjust
+        transform.tag = TagNames.StackComputer.ToString();
 
         // set follow target
         target = ComputerStack.instance.GetFrontComputer();
@@ -82,19 +84,19 @@ public class FrontStackMovement : MonoBehaviour
         }
     }
 
-    private void StopFollowing()
+    public void StopFollowing()
     {
+        // tag adjust
+        transform.tag = TagNames.CollectComputer.ToString();
+
         // disable collider for duration, avoiding unnecessery collisions
         Utils.instance.EnableColliderForDuration(collider, false, .5f);
 
-        // set layer mask
-        gameObject.layer = LayerMask.NameToLayer("CollectComputer");
+        // clean target
+        target = null;
 
         // remove from stack
         ComputerStack.instance.AddRemoveFromStack(transform, StackAddRemove.Remove);
-
-        // throw it to the front with DoJump
-        // ...
     }
 
     #endregion

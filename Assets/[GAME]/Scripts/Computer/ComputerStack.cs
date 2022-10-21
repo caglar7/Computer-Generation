@@ -117,7 +117,7 @@ public class ComputerStack : MonoBehaviour
 
 // UPDATE ENUMS
 // layer mask names for triggers and collision
-public enum LayerMaskName
+public enum TagNames
 {
     StackComputer,
     CollectComputer,

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4848127084406582912}
   - component: {fileID: 4848127084406582918}
   - component: {fileID: 4848127084406582919}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 4848127084577762872}
   - component: {fileID: 4848127084577762873}
   - component: {fileID: 4848127084577762878}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 13473391}
   - component: {fileID: 4848127084836787588}
   - component: {fileID: 4848127084836787591}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PlayerComputer
   m_TagString: StackComputer
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posSwipe: 1
   clampMaxVal: 2.7
-  lerpMult: 1.5
+  lerpMult: 1.8
   mouseDamp: 600
   obj: {fileID: 4848127084836787611}
   desiredPos: {x: 0, y: 0, z: 0}
@@ -303,7 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4848127085618286297}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
