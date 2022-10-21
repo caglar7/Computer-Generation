@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posSwipe: 1
   clampMaxVal: 2.7
-  lerpMult: 1
+  lerpMult: 1.5
   mouseDamp: 600
   obj: {fileID: 4848127084836787611}
   desiredPos: {x: 0, y: 0, z: 0}
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a834bc7dba09f3489fe597ec1a90381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  computerIndex: 0
+  objGFX: {fileID: 4848127085618286297}
 --- !u!1 &4848127085618286302
 GameObject:
   m_ObjectHideFlags: 0

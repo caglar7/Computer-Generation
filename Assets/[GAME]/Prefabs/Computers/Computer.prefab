@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a834bc7dba09f3489fe597ec1a90381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  computerIndex: 0
+  objGFX: {fileID: 7460816655150356903}
 --- !u!114 &7460816655296860364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b871332f01eb64d83e8181cc00dd13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 0}
+  target: {fileID: 0}
 --- !u!1 &7460816656795984060
 GameObject:
   m_ObjectHideFlags: 0

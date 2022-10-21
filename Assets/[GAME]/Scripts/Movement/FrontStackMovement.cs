@@ -68,6 +68,9 @@ public class FrontStackMovement : MonoBehaviour
 
         // add to the stack
         ComputerStack.instance.AddRemoveFromStack(transform, StackAddRemove.Add);
+
+        // anim
+        ComputerStack.instance.ScaleAnimation();
     } 
 
     private void FollowStack()
@@ -84,9 +87,6 @@ public class FrontStackMovement : MonoBehaviour
 
     private void StopFollowing()
     {
-        // testin
-        print("enable collider for dur");
-
         // disable collider for duration, avoiding unnecessery collisions
         Utils.instance.EnableColliderForDuration(collider, false, .5f);
 
