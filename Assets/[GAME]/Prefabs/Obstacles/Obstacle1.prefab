@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8097579704120905412}
   - component: {fileID: 8097579704120905413}
   - component: {fileID: 8097579704120905414}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Obstacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,3 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6778596274093f844a109797bbaf7ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushDistance: 4
+  pushDuration: 0.7
+  pushEase: 3

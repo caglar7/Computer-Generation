@@ -194,6 +194,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computer (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7460816655296860363, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5719a2769789e4aa7ab8bea2e61f0e, type: 3}
 --- !u!4 &83205835 stripped
@@ -503,6 +508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computer (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7460816655296860363, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5719a2769789e4aa7ab8bea2e61f0e, type: 3}
 --- !u!1 &308619805
@@ -707,6 +717,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computer (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7460816655296860363, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5719a2769789e4aa7ab8bea2e61f0e, type: 3}
 --- !u!108 &705507994 stripped
@@ -760,8 +775,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackZOffset: 1.8
-  posUpdateSpeed: 40
+  posUpdateSpeed: 30
   animScaleMult: 1.5
+  throwJumpDistanceZ: 10
+  throwJumpVaryZ: 2
+  throwJumpVaryX: 2
+  throwJumpTime: 1
+  throwJumpPower: 2.5
+  throwJumpCount: 2
+  throwJumpEase: 1
 --- !u!1 &834528307
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,6 +1003,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computer (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7460816655296860363, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5719a2769789e4aa7ab8bea2e61f0e, type: 3}
 --- !u!1001 &1134397391
@@ -1180,6 +1207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Computer (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460816655296860363, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5719a2769789e4aa7ab8bea2e61f0e, type: 3}
@@ -2060,6 +2092,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computer
       objectReference: {fileID: 0}
+    - target: {fileID: 7460816655296860363, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb5719a2769789e4aa7ab8bea2e61f0e, type: 3}
 --- !u!1001 &8097579704239019585
@@ -2077,7 +2114,7 @@ PrefabInstance:
     - target: {fileID: 8097579704120905410, guid: 03e2a8ddcd3f3fd43852781af1cf0ae9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.03
+      value: 2.402
       objectReference: {fileID: 0}
     - target: {fileID: 8097579704120905410, guid: 03e2a8ddcd3f3fd43852781af1cf0ae9,
         type: 3}
@@ -2087,7 +2124,7 @@ PrefabInstance:
     - target: {fileID: 8097579704120905410, guid: 03e2a8ddcd3f3fd43852781af1cf0ae9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.63
+      value: 18.96
       objectReference: {fileID: 0}
     - target: {fileID: 8097579704120905410, guid: 03e2a8ddcd3f3fd43852781af1cf0ae9,
         type: 3}
@@ -2128,11 +2165,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8097579704120905411, guid: 03e2a8ddcd3f3fd43852781af1cf0ae9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e2a8ddcd3f3fd43852781af1cf0ae9, type: 3}

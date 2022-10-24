@@ -23,6 +23,15 @@ public class ComputerStack : MonoBehaviour
     public float animScaleMult = 2f;    // scaling animations when stacking
     Vector3 initScale;
 
+    [Header("Obstacle Throwing Computers Settings")]
+    [SerializeField] float throwJumpDistanceZ = 5f;
+    [SerializeField] float throwJumpVaryZ = 1f;     // value in range => throwDistanceZ + (-1f to +1f)
+    [SerializeField] float throwJumpVaryX = 2f;     // value in range => -2f to +2f
+    [SerializeField] float throwJumpTime = 1f;
+    [SerializeField] float throwJumpPower = 1f;
+    [SerializeField] int throwJumpCount = 2;
+    [SerializeField] Ease throwJumpEase = Ease.Linear;
+
     #region Start
     private void Start()
     {
@@ -35,6 +44,46 @@ public class ComputerStack : MonoBehaviour
     public void AddRemoveFromStack(Transform obj, StackAddRemove mode)
     {
         obj.SetParent((mode == StackAddRemove.Add) ? transform : null);
+    }
+
+    // lose computer on front when hit
+    public void ThrowFrontComputers(Transform hitComputer)
+    {
+        // check
+        //PlayerController player = hitComputer.GetComponent<PlayerController>();
+
+        // remove the hit computer, later with effect
+        Destroy(hitComputer.gameObject);
+
+        // get list of computer to throw
+        float zRef = hitComputer.position.z;
+        int count = transform.childCount;
+        List<Transform> listThrow = new List<Transform>();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            float z = transform.GetChild(i).position.z;
+            if(z > zRef)
+            {
+                listThrow.Add(transform.GetChild(i));
+            }
+        }
+
+        // throw items
+        foreach (Transform t in listThrow)
+        {
+            // find throw pos
+            float throwDis = Random.Range(throwJumpDistanceZ - throwJumpVaryZ, throwJumpDistanceZ + throwJumpVaryZ);
+            Vector3 next = t.position;
+            next.x = Random.Range(-throwJumpVaryX, throwJumpVaryX);
+            next.z = t.position.z + throwDis;
+
+            // stop front stack follow
+            t.GetComponent<FrontStackMovement>().StopFollowing();
+
+            // tween do jump
+            t.DOJump(next, throwJumpPower, throwJumpCount, throwJumpTime)
+                .SetEase(throwJumpEase);
+        }
     }
 
     #endregion
@@ -67,11 +116,6 @@ public class ComputerStack : MonoBehaviour
 
                 // transition delay
                 yield return new WaitForSeconds(transitionTime);
-
-                // tsetin
-                print("animating");
-                print("scale target: " + initScale * animScaleMult);
-
             }
         }
     }
