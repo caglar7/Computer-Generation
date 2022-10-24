@@ -12,7 +12,7 @@ public class Obstacle : MonoBehaviour
     [SerializeField] Ease pushEase = Ease.Linear;
 
     // 2 cases
-    // check for player controller component
+    // collider computer has player component or not
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == TagNames.StackComputer.ToString())
@@ -20,15 +20,9 @@ public class Obstacle : MonoBehaviour
             // get components
             PlayerController player = other.GetComponent<PlayerController>();
 
-            // if computer has player component, push back
-            if(player)
-            {
-                player.PushBack(pushDistance, pushDuration, pushEase);
-            }
-            else // no player component, remove the computer that hit, and throw the ones on front
-            {
-                ComputerStack.instance.ThrowFrontComputers(other.transform);
-            }
+            // throw computers
+            if (player) player.PushBack(pushDistance, pushDuration, pushEase);
+            ComputerStack.instance.ThrowFrontComputers(other.transform, player);
         }
     }
 }

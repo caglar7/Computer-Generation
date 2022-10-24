@@ -47,20 +47,19 @@ public class ComputerStack : MonoBehaviour
     }
 
     // lose computer on front when hit
-    public void ThrowFrontComputers(Transform hitComputer)
+    public void ThrowFrontComputers(Transform hitComputer, PlayerController player)
     {
-        // check
-        //PlayerController player = hitComputer.GetComponent<PlayerController>();
-
         // remove the hit computer, later with effect
-        Destroy(hitComputer.gameObject);
+        if(player == null) Destroy(hitComputer.gameObject);
 
-        // get list of computer to throw
+        // get list of computer to throw, excluding player
         float zRef = hitComputer.position.z;
         int count = transform.childCount;
         List<Transform> listThrow = new List<Transform>();
         for (int i = 0; i < transform.childCount; i++)
         {
+            if (transform.GetChild(i).GetComponent<PlayerController>()) continue;
+
             float z = transform.GetChild(i).position.z;
             if(z > zRef)
             {
