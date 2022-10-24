@@ -152,7 +152,7 @@ PrefabInstance:
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.04
+      value: 23.58
       objectReference: {fileID: 0}
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
@@ -466,7 +466,7 @@ PrefabInstance:
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.120003
+      value: 32.660004
       objectReference: {fileID: 0}
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
@@ -688,7 +688,7 @@ PrefabInstance:
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.81
+      value: 14.349998
       objectReference: {fileID: 0}
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210e4bff9469b1f4aa45f53cd1aa2191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stackZOffset: 1.8
+  stackZOffset: 2.5
   posUpdateSpeed: 30
   animScaleMult: 1.5
   throwJumpDistanceZ: 10
@@ -974,7 +974,7 @@ PrefabInstance:
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.240002
+      value: 28.78
       objectReference: {fileID: 0}
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
@@ -1179,7 +1179,7 @@ PrefabInstance:
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.4
+      value: 19.939999
       objectReference: {fileID: 0}
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
@@ -2063,7 +2063,7 @@ PrefabInstance:
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.32
+      value: 10.859999
       objectReference: {fileID: 0}
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
