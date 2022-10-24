@@ -21,9 +21,9 @@ public class Utils : MonoBehaviour
 
     IEnumerator EnableColliderForDurationCo(Collider col, bool state, float duration)
     {
-        col.enabled = state;
+        if(col) col.enabled = state;
         yield return new WaitForSeconds(duration);
-        col.enabled = !state;
+        if(col) col.enabled = !state;
     }
     #endregion
 }

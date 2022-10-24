@@ -79,6 +79,9 @@ public class ComputerStack : MonoBehaviour
             // stop front stack follow
             t.GetComponent<FrontStackMovement>().StopFollowing();
 
+            // set back to collectable parent
+            t.SetParent(CollectablesParent.instance.transform);
+
             // tween do jump
             t.DOJump(next, throwJumpPower, throwJumpCount, throwJumpTime)
                 .SetEase(throwJumpEase);

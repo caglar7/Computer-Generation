@@ -15,7 +15,7 @@ using UnityEngine;
 
 public class FrontStackMovement : MonoBehaviour
 {
-    public Transform target;  // later make it private, visualizing for now
+    [HideInInspector] public Transform target;  // later make it private, visualizing for now
 
     [Header("Settings")]
     float zOffset, updateSpeed;
