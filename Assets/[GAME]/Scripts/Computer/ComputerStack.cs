@@ -54,7 +54,6 @@ public class ComputerStack : MonoBehaviour
 
         // get list of computer to throw, excluding player
         float zRef = hitComputer.position.z;
-        int count = transform.childCount;
         List<Transform> listThrow = new List<Transform>();
         for (int i = 0; i < transform.childCount; i++)
         {

@@ -4,28 +4,26 @@ using UnityEngine;
 
 public class ComputerMeshControl : MonoBehaviour
 {
-    // follow what meshes object has
-    // depending on what components we got
-    // => body, keyboard frame, mousepad frame, keyboard, mousepad, screen frame, screen
+    public List<Transform> listActiveMeshes;
 
-    public Transform body_Nothing;
-    public Transform body_KeyboardFrame;
-    public Transform body_MousepadFrame;
-    public Transform body_KeyboardFrame_MousepadFrame;
-    public Transform body_Keyboard;
-    public Transform screen_Frame;
-    public Transform screen_Filled;
-
-    // IMPLEMENT
-    // methods like this are gonna be used by the robots
-    public void AddKeyboardFrame()
+    private void AddComputerPart(ComputerPart part)
     {
+        // get next meshes
+        List<Transform> nextMeshes = new List<Transform>();
+        foreach(Transform t1 in listActiveMeshes)
+        {
+            nextMeshes.AddRange(t1.GetComponent<ComputerMesh>().nextMeshes);
+        }
 
-    }
-
-    public void AddMousepadFrame()
-    {
-
+        // add the part if next mesh has the part
+        foreach(Transform t2 in nextMeshes)
+        {
+            if(t2.GetComponent<ComputerMesh>().parts.Contains(part))
+            {
+                t2.gameObject.SetActive(true);
+                break;
+            }
+        }
     }
 }
 
@@ -38,3 +36,14 @@ public class ComputerMeshControl : MonoBehaviour
 //    Body_KeyboardFrame_MousepadFrame,
 //    Screen,
 //}
+
+public enum ComputerPart
+{
+    Body,
+    Keyboard_Frame,
+    Mousepad_Frame,
+    Keyboard,
+    Mousepad,
+    Screen_Frame,
+    Screen,
+}

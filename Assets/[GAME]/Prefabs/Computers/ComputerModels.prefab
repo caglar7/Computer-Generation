@@ -93,7 +93,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5caa32b30caaca4db1a7ad23b1563e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parts: 00000000
   deactivateMeshes: []
+  nextMeshes:
+  - {fileID: 1263991789407792422}
+  - {fileID: 5967690737336029370}
+  - {fileID: 5106480964986094038}
 --- !u!1 &4666589205290796451
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,8 +193,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5caa32b30caaca4db1a7ad23b1563e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parts: 0000000001000000
   deactivateMeshes:
   - {fileID: 6643147706016124833}
+  nextMeshes:
+  - {fileID: 6301663243098651276}
+  - {fileID: 1894040739720969960}
+  - {fileID: 5106480964986094038}
 --- !u!1 &4869852639856676359
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,10 +295,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5caa32b30caaca4db1a7ad23b1563e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parts: 000000000100000002000000
   deactivateMeshes:
   - {fileID: 6643147706016124833}
   - {fileID: 1263991789407792422}
   - {fileID: 5967690737336029370}
+  nextMeshes:
+  - {fileID: 1894040739720969960}
+  - {fileID: 5106480964986094038}
 --- !u!1 &6194034621842218883
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,8 +396,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5caa32b30caaca4db1a7ad23b1563e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parts: 0000000002000000
   deactivateMeshes:
   - {fileID: 6643147706016124833}
+  nextMeshes:
+  - {fileID: 6301663243098651276}
+  - {fileID: 5106480964986094038}
 --- !u!1 &7645177866057703141
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5caa32b30caaca4db1a7ad23b1563e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parts: 03000000
   deactivateMeshes: []
+  nextMeshes: []
 --- !u!1 &8774422291854960290
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +510,7 @@ GameObject:
   - component: {fileID: 4125446551893948493}
   - component: {fileID: 7642635108156223471}
   m_Layer: 0
-  m_Name: Screen_Empty
+  m_Name: Screen_Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -572,7 +592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5caa32b30caaca4db1a7ad23b1563e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parts: 05000000
   deactivateMeshes: []
+  nextMeshes: []
 --- !u!1 &8900892612214071414
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,10 +644,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b9675ff646b794789dc378230d50ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  body_Nothing: {fileID: 0}
-  body_KeyboardFrame: {fileID: 0}
-  body_MousepadFrame: {fileID: 0}
-  body_KeyboardFrame_MousepadFrame: {fileID: 0}
-  body_Keyboard: {fileID: 0}
-  screen_Frame: {fileID: 0}
-  screen_Filled: {fileID: 0}
+  listActiveMeshes: []
