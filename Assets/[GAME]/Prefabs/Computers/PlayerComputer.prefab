@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 13473391}
   - component: {fileID: 4848127084836787588}
   - component: {fileID: 4848127084836787591}
+  - component: {fileID: 852135952108940118}
   m_Layer: 0
   m_Name: PlayerComputer
   m_TagString: StackComputer
@@ -198,6 +199,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a834bc7dba09f3489fe597ec1a90381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objGFX: {fileID: 4538811874277470633}
+--- !u!114 &852135952108940118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848127084836787608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd709d2dee5003489964f6c7616f366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objGFX: {fileID: 4538811874277470633}

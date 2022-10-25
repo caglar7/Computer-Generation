@@ -6,6 +6,10 @@ public class Robot : MonoBehaviour
 {
     [SerializeField] ComputerPart addedPart;
 
+    [Header("Animation Check")]
+    [SerializeField] bool playAnimationAfter = false;
+    [SerializeField] float animationDelay = .5f;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == TagNames.StackComputer.ToString())

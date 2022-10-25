@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 83205836}
   - component: {fileID: 7460816655296860365}
   - component: {fileID: 7460816655296860364}
+  - component: {fileID: 5974788459942562440}
   m_Layer: 0
   m_Name: Computer
   m_TagString: CollectComputer
@@ -90,6 +91,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &5974788459942562440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7460816655296860363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd709d2dee5003489964f6c7616f366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objGFX: {fileID: 8932890873261014279}
 --- !u!1001 &8354007931224488975
 PrefabInstance:
   m_ObjectHideFlags: 0
