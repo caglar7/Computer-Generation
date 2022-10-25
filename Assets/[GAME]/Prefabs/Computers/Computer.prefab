@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a834bc7dba09f3489fe597ec1a90381, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objGFX: {fileID: 0}
+  objGFX: {fileID: 8932890873261014279}
 --- !u!114 &7460816655296860364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,7 +155,7 @@ PrefabInstance:
     - target: {fileID: 8900892612214071414, guid: 93bfd3916e858fe4c99a0749f810ba10,
         type: 3}
       propertyPath: m_Name
-      value: Models
+      value: GFX
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93bfd3916e858fe4c99a0749f810ba10, type: 3}

@@ -69,7 +69,7 @@ public class FrontStackMovement : MonoBehaviour
         ComputerStack.instance.AddRemoveFromStack(transform, StackAddRemove.Add);
 
         // anim
-        ComputerStack.instance.ScaleAnimation();
+        //ComputerStack.instance.ScaleAnimation();
     } 
 
     private void FollowStack()

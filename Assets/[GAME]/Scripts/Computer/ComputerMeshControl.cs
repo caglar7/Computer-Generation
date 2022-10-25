@@ -6,7 +6,7 @@ public class ComputerMeshControl : MonoBehaviour
 {
     public List<Transform> listActiveMeshes;
 
-    private void AddComputerPart(ComputerPart part)
+    public void AddComputerPart(ComputerPart part)
     {
         // get next meshes
         List<Transform> nextMeshes = new List<Transform>();
