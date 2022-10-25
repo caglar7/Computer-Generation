@@ -26,5 +26,15 @@ public class Utils : MonoBehaviour
         if(col) col.enabled = !state;
     }
     #endregion
+
+    #region Rotation Adjusting
+    
+    public float GetRotation360(float value)
+    {
+        if (value < 0) value += 360f;
+        if (value >= 360f) value -= 360f;
+        return value;
+    }
+    #endregion
 }
 

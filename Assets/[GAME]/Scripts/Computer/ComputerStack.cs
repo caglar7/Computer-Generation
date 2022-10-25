@@ -21,7 +21,7 @@ public class ComputerStack : MonoBehaviour
     public float stackZOffset = 2f;     // diff between computers on front stack
     public float posUpdateSpeed = 5f;   // on x
     public float animScaleMult = 2f;    // scaling animations when stacking
-    Vector3 initScale;
+    public bool animOn = false;
 
     [Header("Obstacle Throwing Computers Settings")]
     [SerializeField] float throwJumpDistanceZ = 5f;
@@ -93,8 +93,13 @@ public class ComputerStack : MonoBehaviour
 
     // animate scaling, also to avoid bugs, make sure each iteration checks for childCount
     // if an object gone missing while animating
-    public void ScaleAnimation(float animTime = .4f, float transitionTime = .1f, Ease ease = Ease.Linear)
+    bool canAnimate = true;
+    public void ScaleAnimation(float animTime = .45f, float transitionTime = .2f, Ease ease = Ease.Linear)
     {
+        if (!animOn) return;
+        if (!canAnimate) return;
+        canAnimate = false;
+
         StartCoroutine(ScaleAnimationCo(animTime, transitionTime, ease));
     }
 
@@ -105,20 +110,16 @@ public class ComputerStack : MonoBehaviour
         {
             if(i < transform.childCount)
             {
-                // anim with tween
-                Transform obj = transform.GetChild(i).GetComponent<Computer>().objGFX;
-                obj.DOKill();
-                obj.DOScale(initScale * animScaleMult, animTime / 3f).SetEase(ease)
-                    .OnComplete(() => {
-
-                        obj.DOScale(initScale, animTime * 2f / 3f).SetEase(ease);
-
-                    });
+                // anim 
+                ComputerAnimations anim = transform.GetChild(i).GetComponent<ComputerAnimations>();
+                anim.Scaling(animScaleMult, animTime, ease);
 
                 // transition delay
                 yield return new WaitForSeconds(transitionTime);
             }
         }
+
+        canAnimate = true;
     }
 
     #endregion
@@ -152,8 +153,7 @@ public class ComputerStack : MonoBehaviour
 
     private void GetFields()
     {
-        // try getting from player computer that also has a computer component
-        initScale = GetComponentInChildren<Computer>().transform.localScale;
+
     }
 
     #endregion
@@ -172,4 +172,10 @@ public enum StackAddRemove
 {
     Add,
     Remove,
+}
+
+public enum ComputerAnimationType
+{
+    Scaling,
+    JumpRotate,
 }
