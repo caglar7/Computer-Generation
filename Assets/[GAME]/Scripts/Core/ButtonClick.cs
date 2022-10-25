@@ -8,6 +8,8 @@ public enum ButtonType
     Start,
     Retry,
     NextLevel,
+    ShowSettings,
+    HideSettings,
 }
 
 [RequireComponent(typeof(Button))]
@@ -30,6 +32,18 @@ public class ButtonClick : MonoBehaviour
                 UIManager.instance.OpenClosePanels(0);
                 break;
 
+            case ButtonType.ShowSettings:
+                if (SettingsUI.instance)
+                {
+
+                    SettingsUI.instance.GetComponent<Animator>().SetTrigger("Show");
+                }
+                break;
+
+            case ButtonType.HideSettings:
+                if (SettingsUI.instance)
+                    SettingsUI.instance.GetComponent<Animator>().SetTrigger("Hide");
+                break;
         }
 
     }
