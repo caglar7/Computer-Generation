@@ -99,7 +99,7 @@ public class ComputerStack : MonoBehaviour
         if (!animOn) return;
         if (!canAnimate) return;
         canAnimate = false;
-
+    
         StartCoroutine(ScaleAnimationCo(animTime, transitionTime, ease));
     }
 

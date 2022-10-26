@@ -30,19 +30,25 @@ public class ButtonClick : MonoBehaviour
         {
             case ButtonType.Start:
                 UIManager.instance.OpenClosePanels(0);
+
                 break;
 
             case ButtonType.ShowSettings:
                 if (SettingsUI.instance)
                 {
-
-                    SettingsUI.instance.GetComponent<Animator>().SetTrigger("Show");
+                    SettingsUI.instance.GetComponent<Animator>().SetBool("Show", true);
+                    SettingsUI.instance.GetComponent<Animator>().SetBool("Hide", false);
                 }
+
                 break;
 
             case ButtonType.HideSettings:
                 if (SettingsUI.instance)
-                    SettingsUI.instance.GetComponent<Animator>().SetTrigger("Hide");
+                {
+                    SettingsUI.instance.GetComponent<Animator>().SetBool("Show", false);
+                    SettingsUI.instance.GetComponent<Animator>().SetBool("Hide", true);
+                }
+
                 break;
         }
 
