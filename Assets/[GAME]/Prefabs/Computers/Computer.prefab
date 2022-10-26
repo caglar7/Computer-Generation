@@ -78,6 +78,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objGFX: {fileID: 8932890873261014279}
+  price: 0
+  listParts: 
 --- !u!114 &7460816655296860364
 MonoBehaviour:
   m_ObjectHideFlags: 0

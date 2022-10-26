@@ -11,4 +11,22 @@ using UnityEngine;
 public class Computer : MonoBehaviour
 {
     public Transform objGFX;
+    public int price = 0;
+    public List<ComputerPart> listParts = new List<ComputerPart>();
+
+    private void Start()
+    {
+        price = 0;
+        AddPartData(ComputerPart.Body);
+    }
+
+    public void AddPartData(ComputerPart part)
+    {
+        // add to the part collection
+        listParts.Add(part);
+
+        // update total price of the computer
+        price += ComputerPartPrices.GetPrice(part);
+
+    }
 }

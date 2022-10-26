@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Robot : MonoBehaviour
 {
+    [Header("Robot Settings")]
     [SerializeField] ComputerPart addedPart;
 
     [Header("Animation Jump Rotate")]
     [SerializeField] bool enableAnimation = false;
     [SerializeField] float animationDelay = .5f;
     [SerializeField] ComputerAnimationType animationType;
-        
+
+    [Header("Money Text")]
+    [SerializeField] MoneyAdded moneyAdded;
+
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == TagNames.StackComputer.ToString())
@@ -28,6 +33,15 @@ public class Robot : MonoBehaviour
 
 
             // data update in Computer class
+            other.GetComponent<Computer>().AddPartData(addedPart);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == TagNames.StackComputer.ToString())
+        {
+
         }
     }
 }
