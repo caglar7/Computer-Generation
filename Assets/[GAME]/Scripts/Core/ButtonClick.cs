@@ -33,6 +33,14 @@ public class ButtonClick : MonoBehaviour
 
                 break;
 
+            case ButtonType.NextLevel:
+                GameManager.instance.NextLevel();
+                break;
+
+            case ButtonType.Retry:
+                GameManager.instance.RetryLevel();
+                break;
+
             case ButtonType.ShowSettings:
                 if (SettingsUI.instance)
                 {

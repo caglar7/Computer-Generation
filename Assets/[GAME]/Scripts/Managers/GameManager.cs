@@ -38,9 +38,6 @@ public class GameManager : MonoBehaviour
     {
         fakeLevelNum = PlayerPrefs.GetInt("FakeLevel",1);
         levelNum = PlayerPrefs.GetInt("Level", 1);
-
-        // updating level texts here
-        //UIManager.instance.UpdateLevelText();
     }
 
     public void SendLevelStartedEvent()
@@ -78,6 +75,8 @@ public class GameManager : MonoBehaviour
             levelNum = 1;
             RecordLevel();
         }
+
+        print("loading scene");
 
         SceneManager.LoadScene(levelNum);
     }

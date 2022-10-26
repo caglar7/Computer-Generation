@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -22,10 +23,42 @@ public class UIManager : MonoBehaviour
     [Header("References")]
     [SerializeField] Camera cam;
 
+    [Header("Transform References")]
+    Transform objPlayer;
+    Transform objLevelEnd;
+
+    [Header("Values")]
+    float levelLength;
+
     private void Start()
-    {       
-        playerController = FindObjectOfType<PlayerController>();
+    {
+        FindObjects();
         PanelController(true, false, false, false);
+    }
+
+    private void FindObjects()
+    {
+        playerController = FindObjectOfType<PlayerController>();
+        objPlayer = playerController.transform;
+        objLevelEnd = FindObjectOfType<EndGame>().transform;
+        levelLength = Vector3.Distance(objPlayer.position, objLevelEnd.position);
+    }
+
+    private void Update()
+    {
+        UpdateProgressBar();
+    }
+
+    // updating slider
+    float remainingDis;
+    private void UpdateProgressBar()
+    {
+        if(ProgressBarUI.instance)
+        {
+            remainingDis = Vector3.Distance(objPlayer.position, objLevelEnd.position);
+            ProgressBarUI.instance.slider.value = Mathf.Clamp(1f - (remainingDis / levelLength), 0f, 1f);
+
+        }
     }
 
     // 0 => start button
