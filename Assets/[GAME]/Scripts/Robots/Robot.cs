@@ -15,7 +15,6 @@ public class Robot : MonoBehaviour
     [Header("Money Text")]
     [SerializeField] MoneyAdded moneyAdded;
 
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == TagNames.StackComputer.ToString())
