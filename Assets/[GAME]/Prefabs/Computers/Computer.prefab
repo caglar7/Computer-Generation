@@ -106,6 +106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objGFX: {fileID: 8932890873261014279}
+  enableInitialAnim: 0
+  animType: 0
 --- !u!1001 &8354007931224488975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,6 +115,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7460816655296860362}
     m_Modifications:
+    - target: {fileID: 319872783804047224, guid: 93bfd3916e858fe4c99a0749f810ba10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 583045830544670984, guid: 93bfd3916e858fe4c99a0749f810ba10,
         type: 3}
       propertyPath: m_RootOrder
@@ -167,6 +174,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4666589205290796451, guid: 93bfd3916e858fe4c99a0749f810ba10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774422291854960290, guid: 93bfd3916e858fe4c99a0749f810ba10,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8900892612214071414, guid: 93bfd3916e858fe4c99a0749f810ba10,
         type: 3}

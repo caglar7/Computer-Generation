@@ -42,11 +42,13 @@ public class Robot : MonoBehaviour
         }
     }
 
+    // here comes the moneyyyy
+    // money money money money 
     private void OnTriggerExit(Collider other)
     {
         if(other.tag == TagNames.StackComputer.ToString())
-        {
-
+        {   
+                
         }
     }
 }

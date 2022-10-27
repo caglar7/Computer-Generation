@@ -18,6 +18,7 @@ public class Computer : MonoBehaviour
     {
         price = 0;
         AddPartData(ComputerPart.Body);
+        AddPartData(ComputerPart.Screen_Frame);
     }
 
     public void AddPartData(ComputerPart part)

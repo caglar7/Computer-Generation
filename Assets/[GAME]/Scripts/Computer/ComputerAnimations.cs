@@ -6,11 +6,18 @@ using DG.Tweening;
 public class ComputerAnimations : MonoBehaviour
 {
     public Transform objGFX;
+    public bool enableInitialAnim = false;
+    public ComputerAnimationType animType;
+
     Vector3 initScale;
 
     private void Start()
     {
         initScale = objGFX.localScale;
+
+        // start anim
+        if (enableInitialAnim) PlayAnimation(animType);
+
     }
 
     public void PlayAnimation(ComputerAnimationType type)

@@ -698,7 +698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 65.8, y: -1.300003}
+  m_AnchoredPosition: {x: -184, y: -1.300003}
   m_SizeDelta: {x: 1598.5862, y: 1410.9888}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &6821483074590511974
@@ -1519,7 +1519,7 @@ RectTransform:
   m_GameObject: {fileID: 1103184971791139191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9611232, y: 0.9611232, z: 0.9611232}
+  m_LocalScale: {x: 0.93248177, y: 0.93248177, z: 0.93248177}
   m_Children:
   - {fileID: 6472767793366355559}
   - {fileID: 4307435352612473505}
@@ -1529,7 +1529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -75, y: -161}
+  m_AnchoredPosition: {x: -49, y: -76.4}
   m_SizeDelta: {x: 255.6576, y: 185.77386}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &1127505776598682118
@@ -1566,7 +1566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -194}
+  m_AnchoredPosition: {x: 0, y: -252}
   m_SizeDelta: {x: 779.35474, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1333730938129135749
@@ -2373,7 +2373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -102.2, y: 5.4}
+  m_AnchoredPosition: {x: -8, y: 5.4}
   m_SizeDelta: {x: 120, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &6303080171005231793
@@ -3323,7 +3323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 67, y: -144}
+  m_AnchoredPosition: {x: 67, y: -101}
   m_SizeDelta: {x: 231.75407, y: 549.9269}
   m_Pivot: {x: 0, y: 1}
 --- !u!95 &2135652602378889526
@@ -5669,7 +5669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38901743, g: 0.5493295, b: 0.5849056, a: 1}
+  m_Color: {r: 0.5512638, g: 0.57215255, b: 0.7169812, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
