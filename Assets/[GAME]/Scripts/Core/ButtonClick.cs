@@ -8,8 +8,7 @@ public enum ButtonType
     Start,
     Retry,
     NextLevel,
-    ShowSettings,
-    HideSettings,
+    Settings,
 }
 
 [RequireComponent(typeof(Button))]
@@ -17,6 +16,7 @@ public class ButtonClick : MonoBehaviour
 {
     [SerializeField] ButtonType buttonType;
     Button button;
+    bool isSettingsShown = false;
 
     private void Start()
     {
@@ -41,21 +41,18 @@ public class ButtonClick : MonoBehaviour
                 GameManager.instance.RetryLevel();
                 break;
 
-            case ButtonType.ShowSettings:
-                if (SettingsUI.instance)
+            case ButtonType.Settings:
+
+                if(isSettingsShown == false && SettingsUI.instance)
                 {
                     SettingsUI.instance.GetComponent<Animator>().SetBool("Show", true);
                     SettingsUI.instance.GetComponent<Animator>().SetBool("Hide", false);
-                }
-
-                break;
-
-            case ButtonType.HideSettings:
-                if (SettingsUI.instance)
+                }else if(SettingsUI.instance)
                 {
                     SettingsUI.instance.GetComponent<Animator>().SetBool("Show", false);
                     SettingsUI.instance.GetComponent<Animator>().SetBool("Hide", true);
                 }
+                isSettingsShown = !isSettingsShown;
 
                 break;
         }

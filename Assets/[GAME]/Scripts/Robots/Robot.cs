@@ -30,7 +30,6 @@ public class Robot : MonoBehaviour
             if (enableAnimation)
                 other.GetComponent<ComputerAnimations>().JumpRotateY(animationDelay);
 
-
             // data update in Computer class
             other.GetComponent<Computer>().AddPartData(addedPart);
         }
