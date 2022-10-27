@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         FindObjects();
-        PanelController(true, false, false, false);
+        PanelController(false, true, false, false);
     }
 
     private void FindObjects()
@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
         switch (panelType)
         {
             case 0:
-                PanelController(false, true, false, false);
+                //PanelController(false, true, false, false);
 
                 playerController.UserActiveController(true);
 

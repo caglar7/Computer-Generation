@@ -21,4 +21,7 @@ public class CanvasSingleton : MonoBehaviour
     public GameObject panelGameIn;
     public GameObject panelRetry;
     public GameObject panelNextLevel;
+
+    [Header("Game In")]
+    public GameObject objShowGo;
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public enum ButtonType
 {
@@ -12,7 +13,7 @@ public enum ButtonType
 }
 
 [RequireComponent(typeof(Button))]
-public class ButtonClick : MonoBehaviour
+public class ButtonClick : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] ButtonType buttonType;
     Button button;
@@ -28,11 +29,6 @@ public class ButtonClick : MonoBehaviour
     {
         switch(buttonType)
         {
-            case ButtonType.Start:
-                UIManager.instance.OpenClosePanels(0);
-
-                break;
-
             case ButtonType.NextLevel:
                 GameManager.instance.NextLevel();
                 break;
@@ -55,6 +51,18 @@ public class ButtonClick : MonoBehaviour
                 isSettingsShown = !isSettingsShown;
 
                 break;
+        }
+
+    }
+
+    // start is exception from switch case
+    // just getting pointer down to start
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if(buttonType == ButtonType.Start)
+        {
+            UIManager.instance.OpenClosePanels(0);
+            CanvasSingleton.instance.objShowGo.SetActive(true);
         }
 
     }
