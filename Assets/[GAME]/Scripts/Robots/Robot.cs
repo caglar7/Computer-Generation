@@ -15,13 +15,20 @@ public class Robot : MonoBehaviour
     [Header("Money Text")]
     [SerializeField] MoneyAdded moneyAdded;
 
+    [Header("Values")]
+    List<Transform> listComputers = new List<Transform>();
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == TagNames.StackComputer.ToString())
         {
-            // check
+            // check 1
             ComputerMeshControl meshControl = other.GetComponentInChildren<ComputerMeshControl>();
             if (meshControl == null) return;
+
+            // check 2
+            if (listComputers.Contains(other.transform)) return;
+            listComputers.Add(other.transform);
 
             // add computer part
             meshControl.AddComputerPart(addedPart);
