@@ -5587,6 +5587,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasSingleton
       objectReference: {fileID: 0}
+    - target: {fileID: 7258335327521126287, guid: da67d80bc78019140bb650c30ae5b427,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258335327521126287, guid: da67d80bc78019140bb650c30ae5b427,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da67d80bc78019140bb650c30ae5b427, type: 3}
 --- !u!1 &5008636203787075677
