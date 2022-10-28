@@ -18,6 +18,7 @@ public class Robot : MonoBehaviour
     [Header("Values")]
     List<Transform> listComputers = new List<Transform>();
 
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == TagNames.StackComputer.ToString())
@@ -39,16 +40,11 @@ public class Robot : MonoBehaviour
 
             // data update in Computer class
             other.GetComponent<Computer>().AddPartData(addedPart);
-        }
-    }
 
-    // here comes the moneyyyy
-    // money money money money 
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.tag == TagNames.StackComputer.ToString())
-        {
-            
+            // add money
+            moneyAdded.Show();
+            moneyAdded.Add(ComputerPartPrices.GetPrice(addedPart));
+            moneyAdded.ScaleAnimation(2.5f);
         }
     }
 }

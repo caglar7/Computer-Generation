@@ -8,6 +8,7 @@ public class MoneyAdded : MonoBehaviour
 {
     TextMeshPro text;
     Vector3 initScale;
+    int addedCount = 0;
 
     private void Start()
     {
@@ -46,5 +47,11 @@ public class MoneyAdded : MonoBehaviour
                 .SetEase(Ease.Linear);
 
             });
+    }
+
+    public void Add(int amount)
+    {
+        addedCount += amount;
+        text.text = ("+" + addedCount.ToString());
     }
 }
