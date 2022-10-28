@@ -17,7 +17,6 @@ public class ComputerAnimations : MonoBehaviour
 
         // start anim
         if (enableInitialAnim) PlayAnimation(animType);
-
     }
 
     public void PlayAnimation(ComputerAnimationType type)
