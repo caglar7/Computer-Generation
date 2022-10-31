@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         gameSituation = GameSituation.notStarted;
         UpdatePlayerPerfs();
+        Time.timeScale = 1f;
     }
 
     void UpdatePlayerPerfs() // initial uı adjust
