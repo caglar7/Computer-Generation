@@ -29,5 +29,7 @@ public class Computer : MonoBehaviour
         // update total price of the computer
         price += ComputerPartPrices.GetPrice(part);
 
+        // update stack total price 
+        MoneyTag.instance.UpdateStackPrice();
     }
 }

@@ -147,6 +147,16 @@ public class ComputerStack : MonoBehaviour
         return transform.GetChild(index);
     }
 
+    public int GetTotalStackPrice()
+    {
+        int value = 0;
+        foreach(Computer c in transform.GetComponentsInChildren<Computer>())
+        {
+            value += c.price;
+        }
+        return value;
+    }
+
     #endregion
 
     #region Init

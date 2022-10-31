@@ -70,6 +70,9 @@ public class FrontStackMovement : MonoBehaviour
 
         // anim
         ComputerStack.instance.ScaleAnimation();
+
+        // update stack price
+        MoneyTag.instance.UpdateStackPrice();
     } 
 
     private void FollowStack()
@@ -97,6 +100,9 @@ public class FrontStackMovement : MonoBehaviour
 
         // remove from stack
         ComputerStack.instance.AddRemoveFromStack(transform, StackAddRemove.Remove);
+
+        // update stack price
+        MoneyTag.instance.UpdateStackPrice();
     }
 
     #endregion

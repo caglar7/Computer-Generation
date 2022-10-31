@@ -57,7 +57,6 @@ public class UIManager : MonoBehaviour
         {
             remainingDis = Vector3.Distance(objPlayer.position, objLevelEnd.position);
             ProgressBarUI.instance.slider.value = Mathf.Clamp(1f - (remainingDis / levelLength), 0f, 1f);
-
         }
     }
 
