@@ -19,7 +19,7 @@ public class ComputerStack : MonoBehaviour
 
     [Header("Front Stack Settings")]    // other components get this data in their starts
     public float stackZOffset_min = 2f;     // diff between computers on front stack
-    public float stackZOffset_max = 4f;
+    public float stackZOffset_vary = .5f;
     public float posUpdateSpeed = 5f;   // on x
     public float animScaleMult = 2f;    // scaling animations when stacking
     public bool animOn = false;
@@ -52,7 +52,7 @@ public class ComputerStack : MonoBehaviour
         float res = stackZOffset_min;
         for (int i = 0; i < transform.childCount; i++)
         {
-            res += .4f;
+            res += stackZOffset_vary;
         }
         return res;
     }
