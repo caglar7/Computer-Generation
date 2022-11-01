@@ -73,6 +73,9 @@ public class FrontStackMovement : MonoBehaviour
 
         // update stack price
         MoneyTag.instance.UpdateStackPrice();
+
+        // get z offset calculation for varying z offset
+        zOffset = ComputerStack.instance.GetZOffset();
     } 
 
     private void FollowStack()
@@ -110,7 +113,6 @@ public class FrontStackMovement : MonoBehaviour
     #region Init
     private void GetSettings()
     {
-        zOffset = ComputerStack.instance.stackZOffset;
         updateSpeed = ComputerStack.instance.posUpdateSpeed;
     } 
 

@@ -18,7 +18,8 @@ public class ComputerStack : MonoBehaviour
     #endregion
 
     [Header("Front Stack Settings")]    // other components get this data in their starts
-    public float stackZOffset = 2f;     // diff between computers on front stack
+    public float stackZOffset_min = 2f;     // diff between computers on front stack
+    public float stackZOffset_max = 4f;
     public float posUpdateSpeed = 5f;   // on x
     public float animScaleMult = 2f;    // scaling animations when stacking
     public bool animOn = false;
@@ -44,6 +45,16 @@ public class ComputerStack : MonoBehaviour
     public void AddRemoveFromStack(Transform obj, StackAddRemove mode)
     {
         obj.SetParent((mode == StackAddRemove.Add) ? transform : null);
+    }
+
+    public float GetZOffset()
+    {
+        float res = stackZOffset_min;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            res += .4f;
+        }
+        return res;
     }
 
     // lose computer on front when hit
