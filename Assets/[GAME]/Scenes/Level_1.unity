@@ -938,7 +938,7 @@ PrefabInstance:
     - target: {fileID: 7777608771149926438, guid: 3a3448ed6fa20de4fb45657021a60b11,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a3448ed6fa20de4fb45657021a60b11, type: 3}
@@ -2273,6 +2273,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot_MousepadFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 7129576250631580180, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7129576250631580183, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
         type: 3}
       propertyPath: m_RootOrder
@@ -3160,6 +3165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Robot_AddMousepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 521301665454868728, guid: 09e86d828ba88db4f9d7dc1e8558e346,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 521301665454868731, guid: 09e86d828ba88db4f9d7dc1e8558e346,
         type: 3}

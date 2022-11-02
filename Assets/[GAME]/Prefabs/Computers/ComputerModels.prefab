@@ -400,6 +400,7 @@ MonoBehaviour:
   nextMeshes:
   - {fileID: 9091449516973506006}
   - {fileID: 7458184552054327442}
+  - {fileID: 7889871794800859425}
 --- !u!1 &4176612679372446910
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +505,7 @@ MonoBehaviour:
   nextMeshes:
   - {fileID: 4417046565968812023}
   - {fileID: 7458184552054327442}
+  - {fileID: 7889871794800859425}
 --- !u!1 &4445540280697678797
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +517,7 @@ GameObject:
   - component: {fileID: 3961597536918876535}
   - component: {fileID: 9208741340720514734}
   m_Layer: 0
-  m_Name: ComputerModelsNew
+  m_Name: ComputerModels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
