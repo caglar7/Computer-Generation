@@ -175,6 +175,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GFX
       objectReference: {fileID: 0}
+    - target: {fileID: 8299470319819865941, guid: af1879a96efa1884d9fd4bef4e5092b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af1879a96efa1884d9fd4bef4e5092b1, type: 3}
 --- !u!4 &5333415857675695952 stripped
