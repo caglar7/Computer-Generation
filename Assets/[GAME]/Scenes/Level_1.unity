@@ -2285,7 +2285,7 @@ PrefabInstance:
     - target: {fileID: 7129576250631580180, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7129576250631580183, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
         type: 3}
@@ -2305,7 +2305,7 @@ PrefabInstance:
     - target: {fileID: 7129576250631580183, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3899994
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: 7129576250631580183, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
         type: 3}
@@ -7905,6 +7905,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909769808}
     m_Modifications:
+    - target: {fileID: 174113047106932544, guid: 89d02c601f69e6049920e512b6a4a4f8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 1475501410964331800, guid: 89d02c601f69e6049920e512b6a4a4f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509185782304765964, guid: 89d02c601f69e6049920e512b6a4a4f8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1c09f963b0c85643b508c9144670c0e, type: 2}
     - target: {fileID: 2061454060609211856, guid: 89d02c601f69e6049920e512b6a4a4f8,
         type: 3}
       propertyPath: m_RootOrder
@@ -7965,6 +7980,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot_AddKeyboard
       objectReference: {fileID: 0}
+    - target: {fileID: 2518107497425039335, guid: 89d02c601f69e6049920e512b6a4a4f8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477490696197579117, guid: 89d02c601f69e6049920e512b6a4a4f8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516726668265895538, guid: 89d02c601f69e6049920e512b6a4a4f8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1c09f963b0c85643b508c9144670c0e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89d02c601f69e6049920e512b6a4a4f8, type: 3}
 --- !u!1 &9126727796887090765
