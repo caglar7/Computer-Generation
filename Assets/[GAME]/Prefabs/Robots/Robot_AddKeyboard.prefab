@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 2061454059974917800}
   m_Layer: 0
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: AddingKeyboard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -545,8 +545,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0040748, y: 1, z: 1}
-  m_Center: {x: 0.0020375554, y: 0, z: 0}
+  m_Size: {x: 1.0040748, y: 1, z: 7.8297606}
+  m_Center: {x: 0.002037571, y: 0, z: -0.8080422}
 --- !u!114 &2061454059974917800
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ TagManager:
   - EndGame
   - CollectComputer
   - StackComputer
+  - AddingKeyboard
   layers:
   - Default
   - TransparentFX
