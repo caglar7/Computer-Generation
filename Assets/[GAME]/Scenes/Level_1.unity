@@ -768,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &169362234
 Transform:
   m_ObjectHideFlags: 0
@@ -2634,6 +2634,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1909769808}
     m_Modifications:
+    - target: {fileID: 4376640512659884929, guid: 3a3448ed6fa20de4fb45657021a60b11,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137735663291547885, guid: 3a3448ed6fa20de4fb45657021a60b11,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7777608771149926437, guid: 3a3448ed6fa20de4fb45657021a60b11,
         type: 3}
       propertyPath: m_RootOrder
@@ -2693,6 +2703,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Robot_KeyboardFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7777608771149926438, guid: 3a3448ed6fa20de4fb45657021a60b11,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a3448ed6fa20de4fb45657021a60b11, type: 3}
@@ -4406,7 +4421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1909769808
 Transform:
   m_ObjectHideFlags: 0
@@ -5941,6 +5956,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot_MousepadFrame
       objectReference: {fileID: 0}
+    - target: {fileID: 7129576250631580180, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7129576250631580183, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
         type: 3}
       propertyPath: m_RootOrder
@@ -5959,7 +5979,7 @@ PrefabInstance:
     - target: {fileID: 7129576250631580183, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.6
+      value: 4.22
       objectReference: {fileID: 0}
     - target: {fileID: 7129576250631580183, guid: 564cd46ada9846a48a9d7a74b1fb06e1,
         type: 3}
@@ -6829,6 +6849,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot_AddMousepad
       objectReference: {fileID: 0}
+    - target: {fileID: 521301665454868728, guid: 09e86d828ba88db4f9d7dc1e8558e346,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 521301665454868731, guid: 09e86d828ba88db4f9d7dc1e8558e346,
         type: 3}
       propertyPath: m_RootOrder
@@ -6847,7 +6872,7 @@ PrefabInstance:
     - target: {fileID: 521301665454868731, guid: 09e86d828ba88db4f9d7dc1e8558e346,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.56
+      value: 21.179998
       objectReference: {fileID: 0}
     - target: {fileID: 521301665454868731, guid: 09e86d828ba88db4f9d7dc1e8558e346,
         type: 3}
@@ -8766,6 +8791,16 @@ PrefabInstance:
     - target: {fileID: 2013634475, guid: ee96ddb202b669148bfd18d9cbd7b7b2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848127084836787588, guid: ee96ddb202b669148bfd18d9cbd7b7b2,
+        type: 3}
+      propertyPath: lerpMult
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848127084836787588, guid: ee96ddb202b669148bfd18d9cbd7b7b2,
+        type: 3}
+      propertyPath: clampMaxVal
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4848127084836787608, guid: ee96ddb202b669148bfd18d9cbd7b7b2,
         type: 3}
@@ -11637,7 +11672,7 @@ PrefabInstance:
     - target: {fileID: 2061454060609211856, guid: 89d02c601f69e6049920e512b6a4a4f8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.66
+      value: -14.62
       objectReference: {fileID: 0}
     - target: {fileID: 2061454060609211856, guid: 89d02c601f69e6049920e512b6a4a4f8,
         type: 3}
