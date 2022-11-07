@@ -41,10 +41,11 @@ public class AddingKeys : MonoBehaviour
             {
                 timer = 0f;
 
-                keyIndex = Mathf.Max(keyIndex + dir, 0);
+                // check
                 Transform keyColomn = transform.GetChild(keyIndex);
                 if (listCheck.Contains(keyColomn)) return;
                 listCheck.Add(keyColomn);
+                keyIndex = Mathf.Clamp(keyIndex + dir, 0, transform.childCount - 1);
 
                 // move keys
                 StartCoroutine(AddKeysCo(keyColomn));
