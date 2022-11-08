@@ -188,6 +188,7 @@ public enum TagNames
     StackComputer,
     CollectComputer,
     AddingKeyboard,
+    PlayerHand,
 }
 
 public enum StackAddRemove

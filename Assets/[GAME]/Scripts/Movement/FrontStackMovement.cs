@@ -23,6 +23,10 @@ public class FrontStackMovement : MonoBehaviour
     [Header("Components")]
     Collider collider;
 
+    // bools
+    bool isFollowingHand = false;
+    
+
     #region Start
     private void Start()
     {
@@ -48,7 +52,8 @@ public class FrontStackMovement : MonoBehaviour
     {
         // check to join stack
         if(transform.tag == TagNames.CollectComputer.ToString()
-            && other.tag == TagNames.StackComputer.ToString())
+            && (other.tag == TagNames.StackComputer.ToString()
+            || other.tag == TagNames.PlayerHand.ToString()))
         {
             StartFollowing();
         }
@@ -62,8 +67,17 @@ public class FrontStackMovement : MonoBehaviour
         // tag adjust
         transform.tag = TagNames.StackComputer.ToString();
 
-        // set follow target
-        target = ComputerStack.instance.GetFrontComputer();
+        // set follow target        
+        if (ComputerStack.instance.transform.childCount == 0)
+        {
+            target = PlayerHand.instance.followPoint;
+            isFollowingHand = true;
+        }
+        else
+        {
+            target = ComputerStack.instance.GetFrontComputer();
+            isFollowingHand = false;
+        }
 
         // add to the stack
         ComputerStack.instance.AddRemoveFromStack(transform, StackAddRemove.Add);
@@ -82,10 +96,21 @@ public class FrontStackMovement : MonoBehaviour
     {
         if(target)
         {
-            // x lerp
+            // lerp follow
             Vector3 pos = transform.position;
-            pos.z = (target.position.z + zOffset);
-            pos.x = Mathf.Lerp(pos.x, target.position.x, Time.deltaTime * updateSpeed);
+
+            if (isFollowingHand)
+            {
+                pos.z = (target.position.z);
+                //pos.x = Mathf.Lerp(pos.x, target.position.x, Time.deltaTime * updateSpeed * 2);
+                pos.x = target.position.x;
+            }
+            else
+            {
+                pos.z = (target.position.z + zOffset);
+                pos.x = Mathf.Lerp(pos.x, target.position.x, Time.deltaTime * updateSpeed);  
+            }
+
             transform.position = pos;
         }
     }
