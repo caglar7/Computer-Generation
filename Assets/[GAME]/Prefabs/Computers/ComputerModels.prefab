@@ -2143,8 +2143,8 @@ GameObject:
   - component: {fileID: 4218714014528923673}
   - component: {fileID: 3869291135467949029}
   - component: {fileID: 7772293284699222866}
-  - component: {fileID: 210798629526124071}
   - component: {fileID: 4368837515125385781}
+  - component: {fileID: 210798629526124071}
   m_Layer: 0
   m_Name: Screen
   m_TagString: Untagged
@@ -2216,21 +2216,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &210798629526124071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448102748792157655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5caa32b30caaca4db1a7ad23b1563e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parts: 05000000
-  deactivateMeshes: []
-  nextMeshes: []
 --- !u!114 &4368837515125385781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2244,6 +2229,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenFrame: {fileID: 7458184552054327442}
+--- !u!114 &210798629526124071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448102748792157655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5caa32b30caaca4db1a7ad23b1563e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parts: 0500000006000000
+  deactivateMeshes:
+  - {fileID: 7458184552054327442}
+  nextMeshes: []
 --- !u!1 &1476338286290365590
 GameObject:
   m_ObjectHideFlags: 0
@@ -3241,7 +3242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parts: 05000000
   deactivateMeshes: []
-  nextMeshes: []
+  nextMeshes:
+  - {fileID: 4218714014528923673}
 --- !u!1 &2740330139861173628
 GameObject:
   m_ObjectHideFlags: 0
