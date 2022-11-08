@@ -9310,16 +9310,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3065767267028385098, guid: da67d80bc78019140bb650c30ae5b427,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -76.3999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4702711775193903298, guid: da67d80bc78019140bb650c30ae5b427,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4702711775193903298, guid: da67d80bc78019140bb650c30ae5b427,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -9434,16 +9424,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CanvasSingleton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7258335327521126287, guid: da67d80bc78019140bb650c30ae5b427,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7258335327521126287, guid: da67d80bc78019140bb650c30ae5b427,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da67d80bc78019140bb650c30ae5b427, type: 3}
@@ -10814,7 +10794,7 @@ PrefabInstance:
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -81.534
+      value: -85.91
       objectReference: {fileID: 0}
     - target: {fileID: 7460816655296860362, guid: fb5719a2769789e4aa7ab8bea2e61f0e,
         type: 3}
