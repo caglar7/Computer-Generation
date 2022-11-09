@@ -36,5 +36,20 @@ public class Utils : MonoBehaviour
         return value;
     }
     #endregion
+
+    #region Convert Numbers
+
+    public string ConvertedNumber(float value)
+    {
+        if (value >= 1000000f) return "1M";
+        else if (value >= 1000f)
+        {
+            float kValue = value / 1000f;
+            return kValue.ToString("0.0") + "K";
+        }
+        else return ((int)value).ToString();
+    }
+
+    #endregion
 }
 

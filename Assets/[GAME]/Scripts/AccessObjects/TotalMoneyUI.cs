@@ -15,7 +15,12 @@ public class TotalMoneyUI : MonoBehaviour
 
     public TextMeshProUGUI text;
     public int revenue = 0;
-    
+
+    private void Start()
+    {
+        UpdateRevenue();
+    }
+
     public void UpdateRevenue(int added = 0)
     {
         // value
@@ -24,6 +29,13 @@ public class TotalMoneyUI : MonoBehaviour
         PlayerPrefs.SetInt("Revenue", revenue);
 
         // UI
-        text.text = revenue.ToString() + "$";
+
+        text.text = Utils.instance.ConvertedNumber(revenue)
+            + "$";
+
+        // might show anim here
+        // ...
     }
+
+    
 }
