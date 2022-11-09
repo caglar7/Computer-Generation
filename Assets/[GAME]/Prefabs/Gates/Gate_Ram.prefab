@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gateType: 2
-  objIcon: {fileID: 0}
+  objIcon: {fileID: 8006203332579770975}
 --- !u!1 &8006203333794307571
 GameObject:
   m_ObjectHideFlags: 0

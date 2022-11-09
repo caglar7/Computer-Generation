@@ -35,14 +35,37 @@ public class Gate : MonoBehaviour
                     // or an effect on top of computer like an upgrade
                     // ...
 
-                    // check 1
+                    // add
                     computer.AddPartData(ComputerPart.Graphic_Card);
 
                     break;
 
                 case GateType.Ram:
 
-                    
+                    // effects and anims
+                    // ...
+
+                    // add
+                    computer.AddPartData(ComputerPart.Ram);
+
+                    break;
+
+                case GateType.Camera:
+
+                    // effect anim ...
+
+                    // add
+                    computer.AddPartData(ComputerPart.Camera);
+
+                    break;
+
+                case GateType.Screen_Larger:
+
+                    // enlarge screen with scaling, prob just scaling laptops
+                    // ...
+
+                    // add
+                    computer.AddPartData(ComputerPart.Screen_Larger);
 
                     break;
             }
@@ -68,15 +91,6 @@ public class Gate : MonoBehaviour
         // remove computer
         Destroy(c.gameObject);
     }
-    #endregion
-
-    #region Graphic Card
-
-    private void AddGraphicCard(Computer c)
-    {
-
-    }
-
     #endregion
 }
 
