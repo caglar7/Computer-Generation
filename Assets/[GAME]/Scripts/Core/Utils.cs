@@ -41,10 +41,22 @@ public class Utils : MonoBehaviour
 
     public string ConvertedNumber(float value)
     {
-        if (value >= 1000000f) return "1M";
-        else if (value >= 1000f)
+        float kValue = value / 1000f;
+        float mValue = value / 1000000f;
+        if (value >= 1000000f)
         {
-            float kValue = value / 1000f;
+            return mValue.ToString("0.0") + "M";
+        }
+        else if (value >= 100000f)
+        {
+            return mValue.ToString("0.00") + "M";
+        }
+        else if(value >= 10000f)
+        {
+            return kValue.ToString("0.0") + "K";
+        }
+        else if(value >= 1000f)
+        {
             return kValue.ToString("0.0") + "K";
         }
         else return ((int)value).ToString();

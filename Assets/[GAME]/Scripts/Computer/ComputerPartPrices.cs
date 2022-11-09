@@ -14,7 +14,7 @@ public static class ComputerPartPrices
         switch(part)
         {
             case ComputerPart.Body:
-                itemPrice = 200;
+                itemPrice = 300;
                 break;
 
             case ComputerPart.Keyboard_Frame:
@@ -39,6 +39,30 @@ public static class ComputerPartPrices
 
             case ComputerPart.Screen:
                 itemPrice = 250;
+                break;
+
+            case ComputerPart.Graphic_Card:
+                itemPrice = 500;
+                break;
+
+            case ComputerPart.Ram:
+                itemPrice = 300;
+                break;
+
+            case ComputerPart.Camera:
+                itemPrice = 100;
+                break;
+
+            case ComputerPart.Screen_Larger:
+                itemPrice = 300;
+                break;
+
+            case ComputerPart.Style:
+                itemPrice = 200;
+                break;
+
+            case ComputerPart.Protection_Sleeve:
+                itemPrice = 200;
                 break;
         }
         return itemPrice;

@@ -30,8 +30,7 @@ public class TotalMoneyUI : MonoBehaviour
 
         // UI
 
-        text.text = Utils.instance.ConvertedNumber(revenue)
-            + "$";
+        text.text = Utils.instance.ConvertedNumber(revenue);
 
         // might show anim here
         // ...

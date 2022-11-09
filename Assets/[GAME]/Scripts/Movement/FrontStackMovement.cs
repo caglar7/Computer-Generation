@@ -102,8 +102,13 @@ public class FrontStackMovement : MonoBehaviour
             if (isFollowingHand)
             {
                 pos.z = (target.position.z);
-                //pos.x = Mathf.Lerp(pos.x, target.position.x, Time.deltaTime * updateSpeed * 2);
+                //pos.z = Mathf.Lerp(pos.z, target.position.z, updateSpeed * 2f);
+
                 pos.x = target.position.x;
+                //pos.x = Mathf.Lerp(pos.x, target.position.x, Time.deltaTime * updateSpeed * 3);
+
+                // testin
+                print("ssdfsdf");
             }
             else
             {

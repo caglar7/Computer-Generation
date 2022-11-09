@@ -46,4 +46,10 @@ public enum ComputerPart
     Mousepad,
     Screen_Frame,
     Screen,
+    Graphic_Card,
+    Ram,
+    Camera,
+    Protection_Sleeve,
+    Screen_Larger,
+    Style,
 }
