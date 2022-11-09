@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 // mec
 // every computer follows the one on the back
@@ -26,7 +27,6 @@ public class FrontStackMovement : MonoBehaviour
     // bools
     bool isFollowingHand = false;
     
-
     #region Start
     private void Start()
     {
@@ -89,7 +89,7 @@ public class FrontStackMovement : MonoBehaviour
         MoneyTag.instance.UpdateStackPrice();
 
         // get z offset calculation for varying z offset
-        zOffset = ComputerStack.instance.GetZOffset();
+        zOffset = ComputerStack.instance.GetZOffset() * transform.localScale.x;
     } 
 
     private void FollowStack()
@@ -135,6 +135,15 @@ public class FrontStackMovement : MonoBehaviour
         MoneyTag.instance.UpdateStackPrice();
     }
 
+    public void UpdateOffsetZ()
+    {
+        // z offset next
+        float next = zOffset * (transform.localScale.x + .3f);      // a little more than mult
+
+        // tween
+        DOTween.To(() => zOffset, y => zOffset = y, next, .5f);
+    }
+
     #endregion
 
     #region Init
@@ -145,6 +154,7 @@ public class FrontStackMovement : MonoBehaviour
 
     private void GetComponents()
     {
+
         collider = GetComponent<Collider>();
     }
     #endregion

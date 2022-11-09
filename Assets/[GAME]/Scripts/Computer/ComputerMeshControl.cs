@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class ComputerMeshControl : MonoBehaviour
 {
-    public List<Transform> listActiveMeshes;
+    [HideInInspector] public List<Transform> listActiveMeshes;
+
+    [Header("Fields")]
+    public Transform obj_BodyParts;
+    public Transform obj_ScreenParts;
 
     public void AddComputerPart(ComputerPart part)
     {

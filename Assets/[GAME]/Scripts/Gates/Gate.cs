@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 // different methods for each
 // gate since we might have different effects for them
@@ -62,7 +63,7 @@ public class Gate : MonoBehaviour
                 case GateType.Screen_Larger:
 
                     // enlarge screen with scaling, prob just scaling laptops
-                    // ...
+                    EnlargeScreen(other.transform, .3f);
 
                     // add
                     computer.AddPartData(ComputerPart.Screen_Larger);
@@ -85,12 +86,59 @@ public class Gate : MonoBehaviour
         // selling effect, or effect combinations
         // ...
 
+        // moving computer to the center further of the sell gate
+        // after that, right after remove and sell
+
         // update UI 
         TotalMoneyUI.instance.UpdateRevenue(c.price);
 
         // remove computer
         Destroy(c.gameObject);
+
+        // delay update stack price
+        yield return new WaitForSeconds(.1f);
+
+        // update stack money count
+        MoneyTag.instance.UpdateStackPrice();
     }
+    #endregion
+
+    #region
+
+    private void EnlargeScreen(Transform obj, float delay = .05f, float animTime = .3f)
+    {
+        StartCoroutine(EnlargeScreenCo(obj, delay, animTime));
+    }
+
+    IEnumerator EnlargeScreenCo(Transform obj, float delay, float animTime)
+    {
+        // get fields that will be scaled
+        Transform objMain = obj;
+        Transform objScreenParts = obj.GetComponentInChildren<ComputerMeshControl>().obj_ScreenParts;
+
+        // values
+        float mult = ComputerStack.instance.enlargeMult;
+        float targetMain = objMain.localScale.x * mult;
+        float targetScreenParts = objScreenParts.localScale.y * mult;   // on y will be scaled
+        float targetPunch = targetMain * 1.3f;
+
+        // delay
+        yield return new WaitForSeconds(delay);
+
+        // main obj scale
+        objMain.DOScale(targetPunch, animTime / 3f)
+            .OnComplete(() => {
+                objMain.DOScale(targetMain, animTime * 2f / 3f);
+            });
+
+        // screen obj scale
+        objScreenParts.DOScaleY(targetScreenParts, animTime)
+            .OnComplete(() => {
+                objMain.GetComponent<FrontStackMovement>().UpdateOffsetZ();
+
+            });
+    }
+
     #endregion
 }
 

@@ -33,6 +33,9 @@ public class ComputerStack : MonoBehaviour
     [SerializeField] int throwJumpCount = 2;
     [SerializeField] Ease throwJumpEase = Ease.Linear;
 
+    [Header("Gate Settings")]
+    public float enlargeMult = 1.2f;
+
     #region Start
     private void Start()
     {

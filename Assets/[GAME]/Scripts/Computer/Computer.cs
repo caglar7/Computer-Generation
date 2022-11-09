@@ -14,6 +14,9 @@ public class Computer : MonoBehaviour
     public int price = 0;
     public List<ComputerPart> listParts = new List<ComputerPart>();
 
+    // bools
+    [HideInInspector] public bool isEnlarged = false;
+
     private void Start()
     {
         price = 0;
