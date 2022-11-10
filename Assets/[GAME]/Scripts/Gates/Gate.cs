@@ -149,13 +149,12 @@ public class Gate : MonoBehaviour
 
     #region Rotate Laptop
 
-    private void RotateLaptop(Transform obj, float duration = .5f, Ease ease = Ease.Linear)
+    private void RotateLaptop(Transform obj, float rotate = 180f, float duration = .5f, Ease ease = Ease.Linear)
     {
         float rotY = obj.eulerAngles.y;
         float nextY = rotY + 180f;
-        Vector3 rot = obj.eulerAngles;
 
-        obj.DORotate(Vector3.up * 180f, duration).SetEase(ease);
+        obj.DORotate(Vector3.up * nextY, duration).SetEase(ease);
 
         //DOTween.To(() => rotY, y => rotY = y, nextY, duration).SetEase(ease)
         //    .OnUpdate(() => {
@@ -166,7 +165,6 @@ public class Gate : MonoBehaviour
 
         //    });
 
-        
     }
 
     #endregion
@@ -183,4 +181,5 @@ public enum GateType
     Screen_Larger,
     Style,
     Rotate,
+    Logo,
 }

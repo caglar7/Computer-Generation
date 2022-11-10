@@ -64,6 +64,10 @@ public static class ComputerPartPrices
             case ComputerPart.Protection_Sleeve:
                 itemPrice = 200;
                 break;
+
+            case ComputerPart.Logo:
+                itemPrice = 100;
+                break;
         }
         return itemPrice;
     }

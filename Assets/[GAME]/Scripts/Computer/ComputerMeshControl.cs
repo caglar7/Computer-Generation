@@ -56,4 +56,5 @@ public enum ComputerPart
     Protection_Sleeve,
     Screen_Larger,
     Style,
+    Logo,
 }
