@@ -69,6 +69,12 @@ public class Gate : MonoBehaviour
                     computer.AddPartData(ComputerPart.Screen_Larger);
 
                     break;
+
+                case GateType.Rotate:
+
+                    RotateLaptop(other.transform);
+
+                    break;
             }
         }
     }
@@ -103,7 +109,7 @@ public class Gate : MonoBehaviour
     }
     #endregion
 
-    #region
+    #region Enlarge Screen
 
     private void EnlargeScreen(Transform obj, float delay = .05f, float animTime = .3f)
     {
@@ -137,6 +143,30 @@ public class Gate : MonoBehaviour
                 objMain.GetComponent<FrontStackMovement>().UpdateOffsetZ();
 
             });
+    }
+
+    #endregion
+
+    #region Rotate Laptop
+
+    private void RotateLaptop(Transform obj, float duration = .5f, Ease ease = Ease.Linear)
+    {
+        float rotY = obj.eulerAngles.y;
+        float nextY = rotY + 180f;
+        Vector3 rot = obj.eulerAngles;
+
+        obj.DORotate(Vector3.up * 180f, duration).SetEase(ease);
+
+        //DOTween.To(() => rotY, y => rotY = y, nextY, duration).SetEase(ease)
+        //    .OnUpdate(() => {
+
+        //        if (rotY < 0f) rotY += 360f;
+        //        rot.y = rotY;
+        //        obj.eulerAngles
+
+        //    });
+
+        
     }
 
     #endregion
