@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using System;
 
 // different methods for each
 // gate since we might have different effects for them
@@ -75,8 +76,25 @@ public class Gate : MonoBehaviour
                     RotateLaptop(other.transform);
 
                     break;
+
+                case GateType.Logo:
+
+                    AddLogo(computer);
+
+                    break;
+
+                case GateType.Style:
+
+                    AddRandomStyle();
+
+                    break;
             }
         }
+    }
+
+    private void AddRandomStyle()
+    {
+        
     }
 
     #region Sell
@@ -165,6 +183,22 @@ public class Gate : MonoBehaviour
 
         //    });
 
+    }
+
+    #endregion
+
+    #region 
+
+    private void AddLogo(Computer c)
+    {
+        // add sprite on laptop back
+        c.GetComponentInChildren<ComputerMeshControl>().obj_Logo.SetActive(true);
+
+        // add data
+        c.AddPartData(ComputerPart.Logo);
+
+        // show effect
+        // ...
     }
 
     #endregion

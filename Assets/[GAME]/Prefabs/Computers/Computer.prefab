@@ -80,6 +80,7 @@ MonoBehaviour:
   objGFX: {fileID: 5333415857675695952}
   price: 0
   listParts: 
+  isEnlarged: 0
 --- !u!114 &7460816655296860364
 MonoBehaviour:
   m_ObjectHideFlags: 0

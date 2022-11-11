@@ -24,7 +24,7 @@ public class ComputerMesh : MonoBehaviour
             t.gameObject.SetActive(false);
         }
 
-        parentMeshControl = transform.parent.parent.GetComponent<ComputerMeshControl>();
+        parentMeshControl = transform.parent.parent.parent.GetComponent<ComputerMeshControl>();
         if (parentMeshControl) parentMeshControl.listActiveMeshes.Add(transform);
     }
 

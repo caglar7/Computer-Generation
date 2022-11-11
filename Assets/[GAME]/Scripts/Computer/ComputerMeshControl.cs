@@ -10,6 +10,9 @@ public class ComputerMeshControl : MonoBehaviour
     public Transform obj_BodyParts;
     public Transform obj_ScreenParts;
 
+    [Header("Logo")]
+    public GameObject obj_Logo;
+
     public void AddComputerPart(ComputerPart part)
     {
         // get next meshes
