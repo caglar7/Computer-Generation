@@ -19,6 +19,7 @@ public class Gate : MonoBehaviour
             objIcon.gameObject.SetActive(false);
             Utils.instance.EnableColliderForDuration(other.GetComponent<Collider>(), false, 1f);
             Computer computer = other.GetComponent<Computer>();
+            ComputerMeshControl computerMeshControl = other.GetComponentInChildren<ComputerMeshControl>();
 
             // check 1
             if (computer == null) return;
@@ -64,7 +65,7 @@ public class Gate : MonoBehaviour
                 case GateType.Screen_Larger:
 
                     // enlarge screen with scaling, prob just scaling laptops
-                    EnlargeScreen(other.transform, .3f);
+                    EnlargeScreen(other.transform, computerMeshControl, .3f);
 
                     // add
                     computer.AddPartData(ComputerPart.Screen_Larger);
@@ -79,22 +80,22 @@ public class Gate : MonoBehaviour
 
                 case GateType.Logo:
 
-                    AddLogo(computer);
+                    AddLogo(computer, computerMeshControl);
 
                     break;
 
                 case GateType.Style:
 
-                    AddRandomStyle();
+                    AddRandomStyle(computerMeshControl);
 
                     break;
             }
         }
     }
 
-    private void AddRandomStyle()
+    private void AddRandomStyle(ComputerMeshControl c)
     {
-        
+        c.AddStyle();
     }
 
     #region Sell
@@ -129,16 +130,16 @@ public class Gate : MonoBehaviour
 
     #region Enlarge Screen
 
-    private void EnlargeScreen(Transform obj, float delay = .05f, float animTime = .3f)
+    private void EnlargeScreen(Transform obj, ComputerMeshControl meshes, float delay = .05f, float animTime = .3f)
     {
-        StartCoroutine(EnlargeScreenCo(obj, delay, animTime));
+        StartCoroutine(EnlargeScreenCo(obj, meshes, delay, animTime));
     }
 
-    IEnumerator EnlargeScreenCo(Transform obj, float delay, float animTime)
+    IEnumerator EnlargeScreenCo(Transform obj, ComputerMeshControl meshes, float delay, float animTime)
     {
         // get fields that will be scaled
         Transform objMain = obj;
-        Transform objScreenParts = obj.GetComponentInChildren<ComputerMeshControl>().obj_ScreenParts;
+        Transform objScreenParts = meshes.obj_ScreenParts;
 
         // values
         float mult = ComputerStack.instance.enlargeMult;
@@ -189,10 +190,10 @@ public class Gate : MonoBehaviour
 
     #region 
 
-    private void AddLogo(Computer c)
+    private void AddLogo(Computer c, ComputerMeshControl meshes)
     {
         // add sprite on laptop back
-        c.GetComponentInChildren<ComputerMeshControl>().obj_Logo.SetActive(true);
+        meshes.obj_Logo.SetActive(true);
 
         // add data
         c.AddPartData(ComputerPart.Logo);

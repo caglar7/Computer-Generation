@@ -13,6 +13,14 @@ public class ComputerMeshControl : MonoBehaviour
     [Header("Logo")]
     public GameObject obj_Logo;
 
+    // components
+    StyleControl[] styleControls;
+
+    private void Start()
+    {
+        styleControls = GetComponentsInChildren<StyleControl>();
+    }
+
     public void AddComputerPart(ComputerPart part)
     {
         // get next meshes
@@ -31,6 +39,14 @@ public class ComputerMeshControl : MonoBehaviour
                 break;
             }
         }
+    }
+
+    public void AddStyle()
+    {
+        if (styleControls.Length == 0) return;
+
+        foreach (StyleControl s in styleControls)
+            s.AddRandomStyle();
     }
 }
 
