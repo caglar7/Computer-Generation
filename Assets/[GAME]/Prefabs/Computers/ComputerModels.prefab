@@ -2136,8 +2136,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 7
+  m_fontSizeBase: 7
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8354,6 +8354,7 @@ GameObject:
   - component: {fileID: 7294595645679762809}
   - component: {fileID: 995343863164675230}
   - component: {fileID: 8389126725552046180}
+  - component: {fileID: 2507179057861232207}
   m_Layer: 0
   m_Name: Keyboard
   m_TagString: Untagged
@@ -8489,6 +8490,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   period: 0.01
+--- !u!114 &2507179057861232207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5929765632350409807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f07bcfa12843c74db7f82d29b34db3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyColors: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
 --- !u!1 &5943734042714010494
 GameObject:
   m_ObjectHideFlags: 0

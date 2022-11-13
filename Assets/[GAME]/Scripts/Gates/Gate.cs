@@ -30,11 +30,15 @@ public class Gate : MonoBehaviour
             // check 1
             if (computer == null) return;
 
-            switch(gateType)
+            // check other gate part and deactivate other one
+            GatePart gatePart = transform.parent.GetComponent<GatePart>();
+            if (gatePart) gatePart.otherPart.EnableColliders(false);
+
+            switch (gateType)
             {
                 case GateType.Sell:
                     SellPoint sellPoint = transform.GetComponentInChildren<SellPoint>();
-                    SellComputer(computer, .1f, sellPoint.transform.position);
+                    SellComputer(computer, .3f, sellPoint.transform.position);
                     break;
 
                 case GateType.Graphic_Card:
@@ -106,7 +110,7 @@ public class Gate : MonoBehaviour
     }
 
     #region Sell
-    private void SellComputer(Computer c, float delay, Vector3 sellPos, float moveTime = .3f)
+    private void SellComputer(Computer c, float delay, Vector3 sellPos, float moveTime = .6f)
     {
         // stop following stack
         c.GetComponent<FrontStackMovement>().StopFollowing();
