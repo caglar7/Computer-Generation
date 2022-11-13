@@ -11,6 +11,7 @@ TagManager:
   - StackComputer
   - AddingKeyboard
   - PlayerHand
+  - LevelEndComputer
   layers:
   - Default
   - TransparentFX

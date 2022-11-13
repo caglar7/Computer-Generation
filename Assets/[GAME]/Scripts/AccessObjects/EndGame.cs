@@ -8,11 +8,24 @@ public class EndGame : MonoBehaviour
     {
         if(other.tag == TagNames.StackComputer.ToString())
         {
-            PlayerController player = other.GetComponent<PlayerController>();
-            if(player)
-            {
-                GameManager.instance.EndGame(2);
-            }
+            // just remove object
+            other.gameObject.SetActive(false);
+
         }
+        else if(other.tag == TagNames.PlayerHand.ToString())
+        {
+            // end game
+            ComputerLevelEnd.instance.Activate();
+
+            // remove hand
+            StartCoroutine(RemovePlayerHand(other.transform, .2f));
+        }
+    }
+
+    IEnumerator RemovePlayerHand(Transform obj, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        obj.gameObject.SetActive(false);
     }
 }

@@ -192,6 +192,7 @@ public enum TagNames
     CollectComputer,
     AddingKeyboard,
     PlayerHand,
+    LevelEndComputer,
 }
 
 public enum StackAddRemove
