@@ -11,6 +11,12 @@ public class Gate : MonoBehaviour
 {
     [SerializeField] GateType gateType;
     [SerializeField] Transform objIcon;
+    int styleIndex = 0;
+
+    private void Start()
+    {
+        styleIndex = UnityEngine.Random.Range(0, 2);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -86,16 +92,16 @@ public class Gate : MonoBehaviour
 
                 case GateType.Style:
 
-                    AddRandomStyle(computerMeshControl);
+                    AddRandomStyle(computerMeshControl, styleIndex);
 
                     break;
             }
         }
     }
 
-    private void AddRandomStyle(ComputerMeshControl c)
+    private void AddRandomStyle(ComputerMeshControl c, int styleIndex)
     {
-        c.AddStyle();
+        c.AddStyle(styleIndex);
     }
 
     #region Sell

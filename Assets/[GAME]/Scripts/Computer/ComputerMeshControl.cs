@@ -13,13 +13,8 @@ public class ComputerMeshControl : MonoBehaviour
     [Header("Logo")]
     public GameObject obj_Logo;
 
-    // components
-    StyleControl[] styleControls;
-
-    private void Start()
-    {
-        styleControls = GetComponentsInChildren<StyleControl>();
-    }
+    [Header("Style Controls")]
+    [SerializeField] StyleControl[] styleControls;
 
     public void AddComputerPart(ComputerPart part)
     {
@@ -41,12 +36,15 @@ public class ComputerMeshControl : MonoBehaviour
         }
     }
 
-    public void AddStyle()
+    public void AddStyle(int styleIndex)    // index 0 or 1
     {
         if (styleControls.Length == 0) return;
 
         foreach (StyleControl s in styleControls)
-            s.AddRandomStyle();
+        {
+            if(s.gameObject.activeSelf)
+                s.AddStyle(styleIndex);
+        }
     }
 }
 

@@ -6159,6 +6159,13 @@ MonoBehaviour:
   obj_BodyParts: {fileID: 223625931211826061}
   obj_ScreenParts: {fileID: 6992173634340835720}
   obj_Logo: {fileID: 2557056107923275619}
+  styleControls:
+  - {fileID: 2187213034793539590}
+  - {fileID: 2288833288264264441}
+  - {fileID: 8309537873423656943}
+  - {fileID: 783434036969239003}
+  - {fileID: 6563709858172583059}
+  - {fileID: 6656172912956133186}
 --- !u!1 &4634249656637537495
 GameObject:
   m_ObjectHideFlags: 0
