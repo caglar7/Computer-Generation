@@ -15,13 +15,18 @@ public class PoolManager : MonoBehaviour
 
     [Header("Objects For Pooling")]
     public GameObject money;
+    public GameObject moneyBlast;
 
     [Header("Pools")]
     [HideInInspector] public PoolingPattern moneyPool;
+    [HideInInspector] public PoolingPattern moneyBlastPool;
 
     void StartCreation()
     {
         moneyPool = new PoolingPattern(money);
         moneyPool.FillPool(20);
+
+        moneyBlastPool = new PoolingPattern(moneyBlast);
+        moneyBlastPool.FillPool(10);
     }
 }

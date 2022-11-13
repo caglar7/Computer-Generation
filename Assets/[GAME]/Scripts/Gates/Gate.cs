@@ -33,7 +33,8 @@ public class Gate : MonoBehaviour
             switch(gateType)
             {
                 case GateType.Sell:
-                    SellComputer(computer, .3f);
+                    SellPoint sellPoint = transform.GetComponentInChildren<SellPoint>();
+                    SellComputer(computer, .1f, sellPoint.transform.position);
                     break;
 
                 case GateType.Graphic_Card:
@@ -105,8 +106,18 @@ public class Gate : MonoBehaviour
     }
 
     #region Sell
-    private void SellComputer(Computer c, float delay)
+    private void SellComputer(Computer c, float delay, Vector3 sellPos, float moveTime = .3f)
     {
+        // stop following stack
+        c.GetComponent<FrontStackMovement>().StopFollowing();
+
+        sellPos.y = transform.position.y;
+        c.transform.DOMove(sellPos, moveTime)
+            .OnComplete(() =>
+            {
+                StartCoroutine(SellComputerCo(c, delay));
+            });
+
         StartCoroutine(SellComputerCo(c, delay));
     }
 
@@ -122,6 +133,10 @@ public class Gate : MonoBehaviour
 
         // update UI 
         TotalMoneyUI.instance.UpdateRevenue(c.price);
+
+        // money blast effect
+        GameObject effect = PoolManager.Instance.moneyBlastPool.PullObjFromPool();
+        effect.transform.position = c.transform.position; 
 
         // remove computer
         Destroy(c.gameObject);

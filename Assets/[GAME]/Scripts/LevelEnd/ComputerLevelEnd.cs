@@ -52,6 +52,9 @@ public class ComputerLevelEnd : MonoBehaviour
         // start moving upwards
         isMoving = true;
 
+        // collider
+        collider.enabled = true;
+
         // reposition camera
         objCamera.DOLocalMove(Vector3.zero, cameraAdjustTime);
         objCamera.DOLocalRotate(Vector3.zero, cameraAdjustTime)
