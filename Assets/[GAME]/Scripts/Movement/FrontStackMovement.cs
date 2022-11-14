@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using MoreMountains.NiceVibrations;
 
 // mec
 // every computer follows the one on the back
@@ -56,6 +57,9 @@ public class FrontStackMovement : MonoBehaviour
             || other.tag == TagNames.PlayerHand.ToString()))
         {
             StartFollowing();
+
+            // haptic
+            MMVibrationManager.Haptic(HapticTypes.MediumImpact);
         }
     }
 

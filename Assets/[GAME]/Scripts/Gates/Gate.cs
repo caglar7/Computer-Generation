@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using System;
+using MoreMountains.NiceVibrations;
 
 // different methods for each
 // gate since we might have different effects for them
@@ -88,11 +89,17 @@ public class Gate : MonoBehaviour
 
                     RotateLaptop(other.transform);
 
+                    // haptic 
+                    MMVibrationManager.Haptic(HapticTypes.MediumImpact);
+
                     break;
 
                 case GateType.Logo:
 
                     AddLogo(computer, computerMeshControl);
+
+                    // haptic 
+                    MMVibrationManager.Haptic(HapticTypes.MediumImpact);
 
                     break;
 
@@ -100,6 +107,9 @@ public class Gate : MonoBehaviour
 
                     AddRandomStyle(computerMeshControl, styleIndex);
                     if (anim) anim.PlayAnimation(ComputerAnimationType.JumpRotate);
+
+                    // haptic 
+                    MMVibrationManager.Haptic(HapticTypes.MediumImpact);
 
                     break;
             }
@@ -155,6 +165,9 @@ public class Gate : MonoBehaviour
 
         // update stack money count
         MoneyTag.instance.UpdateStackPrice();
+
+        // haptic 
+        MMVibrationManager.Haptic(HapticTypes.MediumImpact);
     }
     #endregion
 
@@ -183,6 +196,10 @@ public class Gate : MonoBehaviour
         // main obj scale
         objMain.DOScale(targetPunch, animTime / 3f)
             .OnComplete(() => {
+
+                // haptic
+                MMVibrationManager.Haptic(HapticTypes.MediumImpact);
+
                 objMain.DOScale(targetMain, animTime * 2f / 3f);
             });
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using MoreMountains.NiceVibrations;
 
 public class ComputerLevelEnd : MonoBehaviour
 {
@@ -42,6 +43,9 @@ public class ComputerLevelEnd : MonoBehaviour
 
     public void Activate(int moneyAdded)
     {
+        // haptic 
+        MMVibrationManager.Haptic(HapticTypes.Success);
+
         // revenue update
         addedRevenue = moneyAdded;
 

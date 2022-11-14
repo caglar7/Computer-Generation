@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4261044058400540928}
   - component: {fileID: 4494418790502170701}
   - component: {fileID: 8987505204369558678}
+  - component: {fileID: 1498965486398486838}
   m_Layer: 5
   m_Name: Ram
   m_TagString: Untagged
@@ -107,6 +108,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1498965486398486838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3701900562956635432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39d5aca7eae259439de8cc93c3489ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4245462546941659438
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,6 +133,7 @@ GameObject:
   - component: {fileID: 4689346338445647211}
   - component: {fileID: 8993238561812232649}
   - component: {fileID: 3705501207534420376}
+  - component: {fileID: 2092015282951734037}
   m_Layer: 5
   m_Name: Camera
   m_TagString: Untagged
@@ -214,6 +228,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2092015282951734037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4245462546941659438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39d5aca7eae259439de8cc93c3489ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7460816655296860363
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +467,7 @@ GameObject:
   - component: {fileID: 6978787151807840783}
   - component: {fileID: 6367632787149683384}
   - component: {fileID: 3358104060386784286}
+  - component: {fileID: 1459519962268805694}
   m_Layer: 5
   m_Name: GraphicCard
   m_TagString: Untagged
@@ -535,6 +562,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1459519962268805694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199919976890989079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39d5aca7eae259439de8cc93c3489ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9006762265158698535
 PrefabInstance:
   m_ObjectHideFlags: 0
