@@ -1566,7 +1566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -277}
+  m_AnchoredPosition: {x: 0, y: -164}
   m_SizeDelta: {x: 779.35474, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1333730938129135749
@@ -3459,7 +3459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6943155092578645645
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4729,7 +4729,7 @@ RectTransform:
   - {fileID: 5001877219269997539}
   - {fileID: 5001877218783499971}
   - {fileID: 5001877217683103703}
-  - {fileID: 257989576139134569}
+  - {fileID: 5199707240469945654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4925,6 +4925,42 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5103362821041512912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5199707240469945654}
+  m_Layer: 5
+  m_Name: TotalMoneyParentUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5199707240469945654
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5103362821041512912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.93178, y: 0.93178, z: 0.93178}
+  m_Children:
+  - {fileID: 257989576139134569}
+  m_Father: {fileID: 5001877219319542850}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -8, y: -136}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 1, y: 1}
 --- !u!1 &5142897359961608446
 GameObject:
   m_ObjectHideFlags: 0
@@ -6930,12 +6966,12 @@ RectTransform:
   - {fileID: 4156382694877224136}
   - {fileID: 5197815681372140199}
   - {fileID: 4320968541043387083}
-  m_Father: {fileID: 5001877219319542850}
-  m_RootOrder: 4
+  m_Father: {fileID: 5199707240469945654}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -49, y: -76.3999}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 255.6576, y: 185.77386}
   m_Pivot: {x: 1, y: 1}
 --- !u!95 &629935102242712754

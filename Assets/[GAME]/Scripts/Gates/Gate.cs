@@ -43,8 +43,8 @@ public class Gate : MonoBehaviour
 
                 case GateType.Graphic_Card:
 
-                    // might show a graphic card effect here
-                    // ...
+                    // computer UI anim
+                    anim.computerUI_GraphicCard.SetActive(true);
 
                     // or an effect on top of computer like an upgrade
                     // ...
@@ -56,8 +56,8 @@ public class Gate : MonoBehaviour
 
                 case GateType.Ram:
 
-                    // effects and anims
-                    // ...
+                    // computer UI anim
+                    anim.computerUI_Ram.SetActive(true);
 
                     // add
                     computer.AddPartData(ComputerPart.Ram);
@@ -66,7 +66,8 @@ public class Gate : MonoBehaviour
 
                 case GateType.Camera:
 
-                    // effect anim ...
+                    // computer UI anim
+                    anim.computerUI_Camera.SetActive(true);
 
                     // add
                     computer.AddPartData(ComputerPart.Camera);

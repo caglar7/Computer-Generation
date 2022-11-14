@@ -11,6 +11,10 @@ public class ComputerAnimations : MonoBehaviour
 
     Vector3 initScale;
 
+    public GameObject computerUI_GraphicCard;
+    public GameObject computerUI_Ram;
+    public GameObject computerUI_Camera;
+
     private void Start()
     {
         initScale = objGFX.localScale;
