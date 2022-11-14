@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -188,6 +188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1841520963932615220, guid: 0fdc145e607b74a44b6a006fd525fec1,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841520963932615220, guid: 0fdc145e607b74a44b6a006fd525fec1,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -203,6 +208,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1841520963932615220, guid: 0fdc145e607b74a44b6a006fd525fec1,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841520963932615220, guid: 0fdc145e607b74a44b6a006fd525fec1,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -215,16 +225,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841520963932615220, guid: 0fdc145e607b74a44b6a006fd525fec1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1841520963932615220, guid: 0fdc145e607b74a44b6a006fd525fec1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1841520963932615220, guid: 0fdc145e607b74a44b6a006fd525fec1,
         type: 3}
@@ -264,12 +264,7 @@ PrefabInstance:
     - target: {fileID: 8593235660112353236, guid: af13d48c8b69b4abeb716979950f78c4,
         type: 3}
       propertyPath: GameID
-      value: e4094b7c93c715e86544b61c23910cbdd132acf13019ba81cdef6e47246f4b11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8593235660112353236, guid: af13d48c8b69b4abeb716979950f78c4,
-        type: 3}
-      propertyPath: GameSecret
-      value: 79309dd9ebe64ebb50a5160df7fcae623678aa32541eda77ce1a294f706b96d9
+      value: 944ab1b7fc6f88798d901bd407c5198fa89ad34a42072799601e89e190ec0702
       objectReference: {fileID: 0}
     - target: {fileID: 8593235660112353236, guid: af13d48c8b69b4abeb716979950f78c4,
         type: 3}
@@ -277,6 +272,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a8255a4164c1540f18d865690fb74a5d,
         type: 2}
+    - target: {fileID: 8593235660112353236, guid: af13d48c8b69b4abeb716979950f78c4,
+        type: 3}
+      propertyPath: GameSecret
+      value: 9416714b59f8409e66b57607428e664f3451ac166e4bfc2210007b8e87e07e69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593235660112353237, guid: af13d48c8b69b4abeb716979950f78c4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8593235660112353237, guid: af13d48c8b69b4abeb716979950f78c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -294,6 +299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8593235660112353237, guid: af13d48c8b69b4abeb716979950f78c4,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593235660112353237, guid: af13d48c8b69b4abeb716979950f78c4,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -306,16 +316,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8593235660112353237, guid: af13d48c8b69b4abeb716979950f78c4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8593235660112353237, guid: af13d48c8b69b4abeb716979950f78c4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8593235660112353237, guid: af13d48c8b69b4abeb716979950f78c4,
         type: 3}
