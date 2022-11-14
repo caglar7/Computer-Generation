@@ -18,8 +18,11 @@ public class EndGame : MonoBehaviour
         }
         else if(other.tag == TagNames.PlayerHand.ToString())
         {
+            // set position to stop going up
+            LevelEndBoxes.instance.AssignStopPoint(MoneyTag.instance.totalStackPrice);
+
             // end game
-            ComputerLevelEnd.instance.Activate();
+            ComputerLevelEnd.instance.Activate(MoneyTag.instance.totalStackPrice);
 
             // remove hand
             StartCoroutine(RemovePlayerHand(other.transform, .2f));

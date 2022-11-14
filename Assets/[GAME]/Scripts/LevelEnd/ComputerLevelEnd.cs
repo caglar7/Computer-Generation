@@ -40,8 +40,11 @@ public class ComputerLevelEnd : MonoBehaviour
         }
     }
 
-    public void Activate()
+    public void Activate(int moneyAdded)
     {
+        // revenue update
+        addedRevenue = moneyAdded;
+
         // camera set parent
         Transform objCamera = Camera.main.transform;
         objCamera.SetParent(pointCamera);
@@ -65,8 +68,21 @@ public class ComputerLevelEnd : MonoBehaviour
         
     }
 
+    int addedRevenue = 0;
     private void OnTriggerEnter(Collider other)
     {
-        // checking for level end boxes
+        LevelEndCube cube = other.GetComponent<LevelEndCube>();
+
+        if (cube && cube.isStopPoint)
+        {
+            isMoving = false;
+
+            // go to level end UI
+            GameManager.instance.EndGame(2);
+
+            // update revenue UI
+            TotalMoneyUI.instance.UpdateRevenue(addedRevenue);
+        }
+            
     }
 }

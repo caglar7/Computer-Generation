@@ -7,6 +7,7 @@ public class LevelEndCube : MonoBehaviour
 {
     float punchMult = 1.1f;
     bool punchDone = false;
+    public bool isStopPoint = false;
 
     public void Punch()
     {

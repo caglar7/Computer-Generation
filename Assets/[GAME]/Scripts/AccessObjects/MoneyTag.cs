@@ -17,7 +17,7 @@ public class MoneyTag : MonoBehaviour
     public TextMeshProUGUI text;
 
     // values
-    private int totalStackPrice = 0;
+    [HideInInspector] public int totalStackPrice = 0;
 
     private void Start()
     {
@@ -27,7 +27,8 @@ public class MoneyTag : MonoBehaviour
 
     public void UpdateStackPrice()
     {
-        text.text = (ComputerStack.instance.GetTotalStackPrice()).ToString();
+        totalStackPrice = ComputerStack.instance.GetTotalStackPrice();
+        text.text = totalStackPrice.ToString();
     }
 
 }

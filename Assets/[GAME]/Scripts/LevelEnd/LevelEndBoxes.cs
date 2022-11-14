@@ -5,6 +5,15 @@ using TMPro;
 
 public class LevelEndBoxes : MonoBehaviour
 {
+    #region singleton
+    public static LevelEndBoxes instance;
+
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    } 
+    #endregion
+
     [Header("Generate Settings")]
     [SerializeField] Transform startPos;
     [SerializeField] float offsetY = 6f;
@@ -39,6 +48,16 @@ public class LevelEndBoxes : MonoBehaviour
             // set text
             copy.GetComponentInChildren<TextMeshPro>().text = Utils.instance.ConvertedNumber(currentMoney);
             currentMoney += increase;
+        }
+    }
+
+    public void AssignStopPoint(int stackMoney)
+    {
+        int checkValue = startMoney;
+        foreach (LevelEndCube cube in transform.GetComponentsInChildren<LevelEndCube>())
+        {
+            if (checkValue >= stackMoney) cube.isStopPoint = true;
+            checkValue += increase;
         }
     }
 }
