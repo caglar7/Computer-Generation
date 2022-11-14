@@ -158,4 +158,5 @@ public class FrontStackMovement : MonoBehaviour
         collider = GetComponent<Collider>();
     }
     #endregion
+
 }

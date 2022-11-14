@@ -61,7 +61,7 @@ public class ComputerStack : MonoBehaviour
     }
 
     // lose computer on front when hit
-    public void ThrowFrontComputers(Transform hitComputer, PlayerController player)
+    public void ThrowFrontComputers(Transform hitComputer, PlayerController player, bool isSelling = false)
     {
         // remove the hit computer, later with effect
         if(player == null) Destroy(hitComputer.gameObject);
@@ -98,6 +98,21 @@ public class ComputerStack : MonoBehaviour
             // tween do jump
             t.DOJump(next, throwJumpPower, throwJumpCount, throwJumpTime)
                 .SetEase(throwJumpEase);
+        }
+    }
+
+    public void SellFrontComputers(Transform objRef)
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform obj = transform.GetChild(i);
+            if(obj != objRef && obj.position.z > objRef.position.z)
+            {
+                // remove computer with effect
+                GameObject dollarBlast = PoolManager.Instance.moneyBlastPool.PullObjFromPool();
+                dollarBlast.transform.position = obj.position;
+                Destroy(obj.gameObject);
+            }
         }
     }
 

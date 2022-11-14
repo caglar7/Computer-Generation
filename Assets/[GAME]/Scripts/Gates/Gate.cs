@@ -30,10 +30,9 @@ public class Gate : MonoBehaviour
             // check 1
             if (computer == null) return;
 
-            // check other gate part and deactivate other one
-            GatePart gatePart = transform.parent.GetComponent<GatePart>();
-            if (gatePart) gatePart.otherPart.EnableColliders(false);
-
+            // set computer disabled for some time
+            Utils.instance.EnableColliderForDuration(other.GetComponent<Collider>(), false, 1f);
+            
             switch (gateType)
             {
                 case GateType.Sell:
@@ -112,6 +111,9 @@ public class Gate : MonoBehaviour
     #region Sell
     private void SellComputer(Computer c, float delay, Vector3 sellPos, float moveTime = .6f)
     {
+        // sell front computer just in case to remove bug
+        ComputerStack.instance.SellFrontComputers(c.transform);
+
         // stop following stack
         c.GetComponent<FrontStackMovement>().StopFollowing();
 
