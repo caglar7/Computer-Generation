@@ -8,6 +8,10 @@ public class EndGame : MonoBehaviour
     {
         if(other.tag == TagNames.StackComputer.ToString())
         {
+            // effect
+            GameObject effect = PoolManager.Instance.smokeExplodePool.PullObjFromPool();
+            effect.transform.position = other.transform.position + (Vector3.up * 1f);
+
             // just remove object
             other.gameObject.SetActive(false);
 

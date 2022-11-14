@@ -26,6 +26,7 @@ public class Gate : MonoBehaviour
             Utils.instance.EnableColliderForDuration(other.GetComponent<Collider>(), false, 1f);
             Computer computer = other.GetComponent<Computer>();
             ComputerMeshControl computerMeshControl = other.GetComponentInChildren<ComputerMeshControl>();
+            ComputerAnimations anim = other.GetComponent<ComputerAnimations>();
 
             // check 1
             if (computer == null) return;
@@ -97,6 +98,7 @@ public class Gate : MonoBehaviour
                 case GateType.Style:
 
                     AddRandomStyle(computerMeshControl, styleIndex);
+                    if (anim) anim.PlayAnimation(ComputerAnimationType.JumpRotate);
 
                     break;
             }

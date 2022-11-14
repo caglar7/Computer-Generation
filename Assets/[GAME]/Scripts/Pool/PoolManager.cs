@@ -16,10 +16,12 @@ public class PoolManager : MonoBehaviour
     [Header("Objects For Pooling")]
     public GameObject money;
     public GameObject moneyBlast;
+    public GameObject smokeExplode;
 
     [Header("Pools")]
     [HideInInspector] public PoolingPattern moneyPool;
     [HideInInspector] public PoolingPattern moneyBlastPool;
+    [HideInInspector] public PoolingPattern smokeExplodePool;
 
     void StartCreation()
     {
@@ -28,5 +30,8 @@ public class PoolManager : MonoBehaviour
 
         moneyBlastPool = new PoolingPattern(moneyBlast);
         moneyBlastPool.FillPool(10);
+
+        smokeExplodePool = new PoolingPattern(smokeExplode);
+        smokeExplodePool.FillPool(7);
     }
 }

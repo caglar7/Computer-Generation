@@ -152,20 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f96aa39c2b9a44bbac3db34595dd5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPanel: {fileID: 0}
-  gameInPanel: {fileID: 0}
-  retryPanel: {fileID: 0}
-  nextLevelPanel: {fileID: 0}
-  levelText: {fileID: 0}
-  diamondNumText: {fileID: 0}
-  gameInPanelLevelText: {fileID: 0}
-  retryPanelLevelText: {fileID: 0}
-  successPanelLevelText: {fileID: 0}
-  diamondImage: {fileID: 0}
-  diamond: {fileID: 3789242919929055462, guid: 066a9b3a05381454c9d9b6c1c95a5ad5, type: 3}
-  diamondNum: 0
-  levelProgressBar: {fileID: 0}
-  endOfLevel: {fileID: 0}
   cam: {fileID: 0}
 --- !u!114 &2741177876076227312
 MonoBehaviour:
@@ -180,7 +166,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: {fileID: 3789242919929055462, guid: 066a9b3a05381454c9d9b6c1c95a5ad5, type: 3}
+  moneyBlast: {fileID: 100000, guid: f857ab4b781c7db42b1968dfb9597edb, type: 3}
+  smokeExplode: {fileID: 153256, guid: fe394d041df1a0547990f49cf653249f, type: 3}
   moneyPool: {fileID: 0}
+  moneyBlastPool: {fileID: 0}
+  smokeExplodePool: {fileID: 0}
 --- !u!1 &2741177877063818815
 GameObject:
   m_ObjectHideFlags: 0

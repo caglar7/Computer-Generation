@@ -784,7 +784,7 @@ MonoBehaviour:
   mouseDamp: 600
   obj: {fileID: 9025126220387653550}
   desiredPos: {x: 0, y: 0, z: 0}
-  forwardSpeed: 8.5
+  forwardSpeed: 8.7
   userActive: 0
 --- !u!114 &4848127086216940463
 MonoBehaviour:

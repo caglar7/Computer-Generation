@@ -9,7 +9,7 @@ using System;
 public class PlayerController : SwipeMecLast
 {
     [Header("Settings")]
-    [SerializeField] float forwardSpeed = 5f;
+    public float forwardSpeed = 5f;
 
     [Header("User Control")]
     [HideInInspector] public bool userActive;
