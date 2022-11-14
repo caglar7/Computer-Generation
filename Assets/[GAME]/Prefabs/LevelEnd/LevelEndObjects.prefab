@@ -5133,7 +5133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   computer: {fileID: 2153108090659487888}
   pointCamera: {fileID: 2449219192990297331}
-  moveSpeed: 12
+  moveSpeed: 14
   cameraAdjustTime: 1
   cameraAdjustEase: 1
 --- !u!1 &2449219193342336628
@@ -11791,7 +11791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPos: {fileID: 2449219193778865800}
   offsetY: 6
-  howMany: 30
+  howMany: 40
   boxes:
   - {fileID: 2486920462744930659, guid: 8bfd98ff0397af8478c2e2129f6855d0, type: 3}
   - {fileID: 3565413649200574476, guid: 35bedb5245dc58940b2eee41e210ca95, type: 3}

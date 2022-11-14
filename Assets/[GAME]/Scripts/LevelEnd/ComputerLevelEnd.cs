@@ -82,6 +82,9 @@ public class ComputerLevelEnd : MonoBehaviour
 
             // update revenue UI
             TotalMoneyUI.instance.UpdateRevenue(addedRevenue);
+
+            // confetti
+            ConfettiControl.instance.Blast();
         }
             
     }
