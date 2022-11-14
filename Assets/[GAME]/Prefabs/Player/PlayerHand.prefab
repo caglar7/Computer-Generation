@@ -779,12 +779,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posSwipe: 1
-  clampMaxVal: 3.8
+  clampMaxVal: 3.3
   lerpMult: 1.8
   mouseDamp: 600
   obj: {fileID: 9025126220387653550}
   desiredPos: {x: 0, y: 0, z: 0}
-  forwardSpeed: 8
+  forwardSpeed: 8.5
   userActive: 0
 --- !u!114 &4848127086216940463
 MonoBehaviour:
