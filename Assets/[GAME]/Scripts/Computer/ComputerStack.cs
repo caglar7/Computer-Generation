@@ -64,7 +64,12 @@ public class ComputerStack : MonoBehaviour
     public void ThrowFrontComputers(Transform hitComputer, PlayerController player, bool isSelling = false)
     {
         // remove the hit computer, later with effect
-        if(player == null) Destroy(hitComputer.gameObject);
+        if(player == null)
+        {
+            GameObject effect = PoolManager.Instance.smokeExplodePool.PullObjFromPool();
+            effect.transform.position = hitComputer.position;
+            Destroy(hitComputer.gameObject);
+        }
 
         // get list of computer to throw, excluding player
         float zRef = hitComputer.position.z;
